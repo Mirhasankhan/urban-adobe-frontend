@@ -21,7 +21,9 @@ const SellPage = () => {
                     <Link href="/register-seller"><button className='bg-green-500 py-2 px-8 mt-4 rounded-lg border border-green-400 hover:bg-transparent'>Create Seller Account</button></Link>
                 </div>
             </div>
+            <div className="pb-6">
             <HowWorks></HowWorks>
+            </div>
         </div>
     );
 };

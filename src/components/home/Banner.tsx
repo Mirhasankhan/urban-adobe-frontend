@@ -17,7 +17,7 @@ const Banner = () => {
                     <button className='bg-orange-500 text-white py-2 px-6 rounded-md'>Rent</button>
                 </div>
                 <div className='mx-4 md:mx-24 bg-white py-6 px-24  rounded-lg'>
-                    <form className='flex justify-center gap-4'>
+                    <form className='md:flex justify-center gap-4'>
                         <div className='w-full'>
                             <label className='block' htmlFor="">Select Categories:</label>
                             {/* <input className='border p-2 rounded-md' type="text" name="" placeholder='Select...' id="" /> */}

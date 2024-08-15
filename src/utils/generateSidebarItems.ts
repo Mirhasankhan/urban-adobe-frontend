@@ -37,6 +37,10 @@ export const sidebarItems = (role: TRoles): SidbarItem[] => {
                     title: "Manage Sales",
                     path: `/${role}/manage-sales`
                 })
+                roleMenus.push({
+                    title: "My Profile",
+                    path: `/${role}/manage-profile`
+                })
             break
         case userRoles.BUYER:
             roleMenus.push({
@@ -48,8 +52,8 @@ export const sidebarItems = (role: TRoles): SidbarItem[] => {
                     path: `/${role}/my-buys`
                 }),
                 roleMenus.push({
-                    title: "My Rents",
-                    path: `/${role}/my-rents`
+                    title: "My Profile",
+                    path: `/${role}/manage-profile`
                 })
             break
         default:
