@@ -14,15 +14,26 @@ const Sidebar = () => {
     <div>
       {sidebarItems(role as TRoles).map((item, index) => (
         <Link key={index} href={`/dashboard/${item.path}`}>
-          <h1
+          <div
+            className={`${
+              pathName === `/dashboard${item.path}`
+                ? "bg-green-500 bg-opacity-10 text-green-500 border-r-4 border-green-600"
+                : ""
+            } bg-gray-200 my-4 p-2 mx-2 rounded-md flex items-center`}
+          >
+            {item.icon && <p className="mr-2 text-xl">{<item.icon />}</p>}
+            <h1>{item.title}</h1>
+          </div>
+          {/* <h1
             className={`${
               pathName === `/dashboard${item.path}`
                 ? "bg-green-500 bg-opacity-10 text-green-500"
                 : ""
             } bg-gray-200 my-4 p-2 mx-2 rounded-md`}
           >
+            {item.icon && <span className="mr-2">{<item.icon />}</span>}
             {item.title}
-          </h1>
+          </h1> */}
         </Link>
       ))}
     </div>

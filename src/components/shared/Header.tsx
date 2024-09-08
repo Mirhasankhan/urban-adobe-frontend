@@ -23,7 +23,7 @@ const Header = () => {
         ></Image>
         <h1 className="font-medium">Urban Adobe</h1>
       </Link>
-      <div className="flex gap-5 items-center font-medium">
+      <div className="hidden md:flex gap-5 items-center font-medium">
         <Link
           className="hover:text-green-500 hover:border-b border-green-500"
           href={"/"}
@@ -46,7 +46,7 @@ const Header = () => {
           className="hover:text-green-500 hover:border-b border-green-500"
           href={"/about"}
         >
-          Abut
+          About
         </Link>
         {email ? (
           <Link

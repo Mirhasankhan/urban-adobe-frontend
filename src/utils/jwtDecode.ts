@@ -1,22 +1,43 @@
-"use client"
+"using client";
 import { jwtDecode, JwtPayload } from "jwt-decode";
 
 interface ExtendedJwtPayload extends JwtPayload {
-    role?: string;
-    name?: string
-    email?: string
+  role?: string;
+  name?: string;
+  email?: string;
 }
 
 export const JWTDecode = () => {
-    const token = localStorage.getItem("token")
+  // Check if window is defined (browser environment)
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem("token");
     if (token) {
-        const decoded = jwtDecode<ExtendedJwtPayload>(token)
-        return decoded
+      const decoded = jwtDecode<ExtendedJwtPayload>(token);
+      return decoded;
     }
-    else {
-        return null
-    }
-}
+  }
+  // Return null if there's no token or if the code is running on the server
+  return null;
+};
+
+// "use client";
+// import { jwtDecode, JwtPayload } from "jwt-decode";
+
+// interface ExtendedJwtPayload extends JwtPayload {
+//   role?: string;
+//   name?: string;
+//   email?: string;
+// }
+
+// export const JWTDecode = () => {
+//   const token = localStorage.getItem("token");
+//   if (token) {
+//     const decoded = jwtDecode<ExtendedJwtPayload>(token);
+//     return decoded;
+//   } else {
+//     return null;
+//   }
+// };
 
 // "use client";
 

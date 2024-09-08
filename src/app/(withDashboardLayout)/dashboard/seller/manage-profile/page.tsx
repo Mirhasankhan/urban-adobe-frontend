@@ -1,4 +1,4 @@
-import Profile from "@/components/dashboard/profile";
+import Profile from "@/components/dashboard/Profile";
 
 const ManageProfile = () => {
   return (

@@ -12,7 +12,6 @@ const HomePage = () => {
       <Categories></Categories>
       <Contact></Contact>
       <About></About>
-
     </div>
   );
 };

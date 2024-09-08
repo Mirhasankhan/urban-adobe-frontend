@@ -6,13 +6,13 @@ const Banner = () => {
       className="h-screen bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
-      <div className="bg-black w-full h-full pt-40 bg-opacity-40">
+      <div className="bg-black w-full h-full md:pt-40 pt-12 bg-opacity-40">
         <div className="text-white text-center">
-          <h1 className="text-4xl font-bold pb-6">
+          <h1 className="text-2xl md:text-4xl font-bold pb-6">
             Find Your Perfect <br />& Wonderful Home
           </h1>
           <p className="text-gray-100">
-            A great plateform to buy, sell and rent your properties without any{" "}
+            A great plateform to buy, sell and rent your properties without any
             <br /> agent or commisions.
           </p>
         </div>

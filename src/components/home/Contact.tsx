@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 const Contact = () => {
   return (
-    <div className="grid grid-cols-2 gap-6 px-4 md:px-14 mt-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-14 mt-12">
       <div>
         <h1>
           Browse our property listing and find your best With over 1 <br />{" "}
