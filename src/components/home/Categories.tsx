@@ -17,7 +17,7 @@ const Categories = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         <Link
-          href="/"
+          href="/listings"
           className="border hover:shadow-xl hover:cursor-pointer rounded-lg"
         >
           <Image
@@ -32,7 +32,10 @@ const Categories = () => {
             <p className="text-gray-500">48 listings</p>
           </div>
         </Link>
-        <div className="border hover:shadow-xl hover:cursor-pointer rounded-lg">
+        <Link
+          href={"/listings"}
+          className="border hover:shadow-xl hover:cursor-pointer rounded-lg"
+        >
           <Image
             className="rounded-t-lg"
             src={list2}
@@ -44,8 +47,11 @@ const Categories = () => {
             <h1 className="text-xl font-medium">Shop</h1>
             <p className="text-gray-500">90 listings</p>
           </div>
-        </div>
-        <div className="border hover:shadow-xl hover:cursor-pointer rounded-lg">
+        </Link>
+        <Link
+          href={"/listings"}
+          className="border hover:shadow-xl hover:cursor-pointer rounded-lg"
+        >
           <Image
             className="rounded-t-lg"
             src={list3}
@@ -57,8 +63,11 @@ const Categories = () => {
             <h1 className="text-xl font-medium">Bachelor</h1>
             <p className="text-gray-500">150 listings</p>
           </div>
-        </div>
-        <div className="border hover:shadow-xl hover:cursor-pointer rounded-lg">
+        </Link>
+        <Link
+          href={"/listings"}
+          className="border hover:shadow-xl hover:cursor-pointer rounded-lg"
+        >
           <Image
             className="rounded-t-lg"
             src={list4}
@@ -70,7 +79,7 @@ const Categories = () => {
             <h1 className="text-xl font-medium">Office</h1>
             <p className="text-gray-500">25 listings</p>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -34,13 +34,13 @@ const Profile = () => {
           <div className="mt-12">
             <h1 className="text-xl font-semibold">EMAIL</h1>
             <p className="text-gray-500">{user?.email}</p>
-            <h1 className="text-xl font-semibold">PHONE</h1>
+            <h1 className="text-xl font-semibold pt-4">PHONE</h1>
             <p className="text-gray-500">+8801678506798</p>
           </div>
           <div className="mt-12">
             <h1 className="text-xl font-semibold">BIRTHDAY</h1>
             <p className="text-gray-500">14 July, 1999</p>
-            <h1 className="text-xl font-semibold">LOCATION</h1>
+            <h1 className="text-xl font-semibold pt-4">LOCATION</h1>
             <p className="text-gray-500">Bangladesh</p>
           </div>
         </div>

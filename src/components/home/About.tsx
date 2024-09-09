@@ -3,7 +3,7 @@ import bg from "../../assets/property.avif";
 const About = () => {
   return (
     <div
-      className="h-48 md:h-64 my-8 md:my-16 bg-fixed text-white bg-cover bg-center flex items-center justify-evenly"
+      className="h-48 md:h-64 my-8 md:mt-16 bg-fixed text-white bg-cover bg-center flex items-center justify-evenly"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
       <div className="flex flex-col items-center">

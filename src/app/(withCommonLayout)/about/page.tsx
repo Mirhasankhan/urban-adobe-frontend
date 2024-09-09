@@ -1,6 +1,7 @@
-// import client1 from "../../../assets/cam.png";
-// import client2 from "../../../assets/cam.png";
-// import client3 from "../../../assets/will.png";
+import Image from "next/image";
+import client1 from "../../../assets/cam.png";
+import client2 from "../../../assets/will.png";
+import { RiDoubleQuotesR } from "react-icons/ri";
 
 const AboutUs = () => {
   return (
@@ -30,9 +31,52 @@ const AboutUs = () => {
         </div>
       </div>
       <div>
-        <h1 className="text-center text-4xl font-medium pt-12">
+        <h1 className="text-center text-4xl font-medium py-12">
           Find Client&apos;s Feedback
         </h1>
+        <div
+          className="
+        grid grid-cols-1 md:grid-cols-2 gap-6 mb-4"
+        >
+          <div className="rounded-md border p-8">
+            <div className="flex justify-between items-center ">
+              <div className="flex items-center gap-2">
+                <Image src={client1} height={60} width={60} alt=""></Image>
+                <div>
+                  <h1 className="font-medium text-xl">Adam Zampa</h1>
+                  <p className="text-red-400">Real State Businnesman</p>
+                </div>
+              </div>
+              <RiDoubleQuotesR className="text-red-500 text-7xl"></RiDoubleQuotesR>
+            </div>
+            <p className="pt-4">
+              I recently used this platform for my real estate needs, and the
+              experience was fantastic. The site is user-friendly, easy to
+              navigate, and made the process of buying/selling property much
+              simpler. I highly recommend it to anyone looking for a seamless
+              real estate experience.
+            </p>
+          </div>
+          <div className="rounded-md border p-8">
+            <div className="flex justify-between items-center ">
+              <div className="flex items-center gap-2">
+                <Image src={client2} height={60} width={60} alt=""></Image>
+                <div>
+                  <h1 className="font-medium text-xl">Cameron Williamson</h1>
+                  <p className="text-red-400">Property Buyer</p>
+                </div>
+              </div>
+              <RiDoubleQuotesR className="text-red-500 text-7xl"></RiDoubleQuotesR>
+            </div>
+            <p className="pt-4">
+              I used this platform to find my new home, and it made the process
+              so easy! The property listings were detailed, and the search
+              features helped me narrow down my options quickly. I found exactly
+              what I was looking for, and the whole experience was smooth and
+              hassle-free. Highly recommend!
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

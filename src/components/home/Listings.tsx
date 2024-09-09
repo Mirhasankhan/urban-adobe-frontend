@@ -17,7 +17,7 @@ const HomeListings = () => {
       </div>
       <div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          {listings?.slice(0, 4).map((listing: TListing) => (
+          {listings?.slice(0, 3).map((listing: TListing) => (
             <Card key={listing._id} listing={listing}></Card>
           ))}
         </div>
