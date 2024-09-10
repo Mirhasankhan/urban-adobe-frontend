@@ -41,7 +41,7 @@ const SellerRegister = () => {
       style={{ backgroundImage: `url(${bgImag.src})` }}
     >
       <form
-        className="bg-white rounded-md p-4 w-1/3 mx-auto"
+        className="bg-white rounded-md p-4 w-5/6 md:w-1/3 mx-auto"
         onSubmit={handleSubmit(onSubmit)}
       >
         <Link href={"/"}>

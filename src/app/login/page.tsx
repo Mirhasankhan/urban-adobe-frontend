@@ -7,8 +7,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "sonner";
-import { FaGithub, FaGoogle } from "react-icons/fa";
-import { signIn } from "next-auth/react";
+// import { FaGithub, FaGoogle } from "react-icons/fa";
+// import { signIn } from "next-auth/react";
 
 type Inputs = {
   name: string;
@@ -45,7 +45,7 @@ const Login = () => {
       style={{ backgroundImage: `url(${bgImag.src})` }}
     >
       <form
-        className="bg-white rounded-md p-4 w-1/3 mx-auto"
+        className="bg-white rounded-md p-4 w-5/6 md:w-1/3 mx-auto"
         onSubmit={handleSubmit(onSubmit)}
       >
         <Link href={"/"}>
@@ -99,8 +99,8 @@ const Login = () => {
             Register
           </Link>
         </h1>
-        <h1 className="border-t pt-4">Or</h1>
-        <button
+        {/* <h1 className="border-t pt-4">Or</h1> */}
+        {/* <button
           onClick={() =>
             signIn("github", {
               callbackUrl: "http://localhost:3000/dashboard",
@@ -117,7 +117,7 @@ const Login = () => {
           }
         >
           <FaGoogle></FaGoogle>
-        </button>
+        </button> */}
       </form>
     </div>
   );

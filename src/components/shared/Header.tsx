@@ -58,7 +58,9 @@ const Header = () => {
         ) : (
           <div>
             <Link href={"/login"}>
-              <button className="bg-green-500 rounded-md p-2">Sign Up</button>
+              <button className="bg-green-500 rounded-md py-2 px-5">
+                Login
+              </button>
             </Link>
           </div>
         )}
