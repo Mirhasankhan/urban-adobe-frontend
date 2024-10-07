@@ -1,4 +1,5 @@
 import bg from "../../assets/home.png";
+import { CiSearch } from "react-icons/ci";
 
 const Banner = () => {
   return (
@@ -16,57 +17,21 @@ const Banner = () => {
             <br /> agent or commisions.
           </p>
         </div>
-        <div className="bg-white p-6 w-80 mx-auto flex justify-between mt-4 rounded-t-md">
-          <button className="bg-green-500 text-white py-2 px-6 rounded-md">
-            Buy
-          </button>
-          <button className="bg-orange-500 text-white py-2 px-6 rounded-md">
-            Rent
-          </button>
-        </div>
-        <div className="mx-4 md:mx-24 bg-white py-6 px-14  rounded-lg">
-          <form className="md:flex justify-center gap-4">
-            <div className="w-full">
-              <label className="block" htmlFor="">
-                Select Categories:
-              </label>
-              {/* <input className='border p-2 rounded-md' type="text" name="" placeholder='Select...' id="" /> */}
-              <select className="border w-full p-2 rounded-md" name="" id="">
-                <option value="family">Family</option>
-                <option value="bachelor">Bachelor</option>
-                <option value="shop">Shop</option>
-                <option value="office">Office</option>
-              </select>
+        <div className="mx-4 md:mx-60 bg-white py-2 px-6 mt-4  rounded-full">
+          <form className="md:flex relative justify-center items-center gap-2">
+            <div className="absolute left-0 text-xl font-bold">
+              <CiSearch className="font-medium"></CiSearch>
             </div>
-            <div>
-              <label className="block" htmlFor="">
-                Min Price:
-              </label>
-              <input
-                className="border p-2 rounded-md"
-                type="text"
-                name=""
-                placeholder="Select..."
-                id=""
-              />
-            </div>
-            <div>
-              <label className="block" htmlFor="">
-                Max Price:
-              </label>
-              <input
-                className="border p-2 rounded-md"
-                type="text"
-                name=""
-                placeholder="Select..."
-                id=""
-              />
-            </div>
+            <input
+              className="w-4/6 rounded-md focus:outline-none p-2 pl-6"
+              type="text"
+              placeholder="city,address,zip :"
+            />
             <button
               type="submit"
-              className="bg-green-500 text-white py-2 px-16 rounded-md mt-4"
+              className="bg-green-500 w-2/6 text-white py-2 px-12 rounded-md"
             >
-              Search
+              Find Out
             </button>
           </form>
         </div>
