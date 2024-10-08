@@ -1,7 +1,13 @@
+"use client";
+import { useRouter } from "next/navigation";
 import bg from "../../assets/home.png";
 import { CiSearch } from "react-icons/ci";
+import { useState } from "react";
 
 const Banner = () => {
+  const [city, setCity] = useState("");
+  const router = useRouter();
+
   return (
     <div
       className="h-screen bg-cover bg-center flex items-center justify-center"
@@ -23,16 +29,17 @@ const Banner = () => {
               <CiSearch className="font-medium"></CiSearch>
             </div>
             <input
+              onChange={(e) => setCity(e.target.value)}
               className="w-4/6 rounded-md focus:outline-none p-2 pl-6"
               type="text"
               placeholder="city,address,zip :"
             />
-            <button
-              type="submit"
-              className="bg-green-500 w-2/6 text-white py-2 px-12 rounded-md"
+            <div
+              onClick={() => router.push(`/listings?address=${city}`)}
+              className="bg-green-500 w-2/6 text-white text-center cursor-pointer py-2 px-12 rounded-md"
             >
               Find Out
-            </button>
+            </div>
           </form>
         </div>
       </div>

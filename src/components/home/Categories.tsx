@@ -1,11 +1,19 @@
+"use client";
 import Image from "next/image";
 import list1 from "../../assets/list1.jpg";
 import list2 from "../../assets/list2.jpg";
 import list3 from "../../assets/list3.jpg";
 import list4 from "../../assets/list4.jpg";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Categories = () => {
+  const router = useRouter();
+
+  const family = `/listings?category=family`;
+  const bachelor = `/listings?category=bachelor`;
+  const shop = `/listings?category=shop`;
+  const office = `/listings?category=office`;
+
   return (
     <div className="px-4 md:px-14">
       <div className="text-center py-12">
@@ -16,8 +24,8 @@ const Categories = () => {
         </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <Link
-          href="/listings"
+        <div
+          onClick={() => router.push(family)}
           className="border hover:shadow-xl hover:cursor-pointer rounded-lg"
         >
           <Image
@@ -31,9 +39,9 @@ const Categories = () => {
             <h1 className="text-xl font-medium">Family</h1>
             <p className="text-gray-500">48 listings</p>
           </div>
-        </Link>
-        <Link
-          href={"/listings"}
+        </div>
+        <div
+          onClick={() => router.push(shop)}
           className="border hover:shadow-xl hover:cursor-pointer rounded-lg"
         >
           <Image
@@ -47,9 +55,9 @@ const Categories = () => {
             <h1 className="text-xl font-medium">Shop</h1>
             <p className="text-gray-500">90 listings</p>
           </div>
-        </Link>
-        <Link
-          href={"/listings"}
+        </div>
+        <div
+          onClick={() => router.push(bachelor)}
           className="border hover:shadow-xl hover:cursor-pointer rounded-lg"
         >
           <Image
@@ -63,9 +71,9 @@ const Categories = () => {
             <h1 className="text-xl font-medium">Bachelor</h1>
             <p className="text-gray-500">150 listings</p>
           </div>
-        </Link>
-        <Link
-          href={"/listings"}
+        </div>
+        <div
+          onClick={() => router.push(office)}
           className="border hover:shadow-xl hover:cursor-pointer rounded-lg"
         >
           <Image
@@ -79,7 +87,7 @@ const Categories = () => {
             <h1 className="text-xl font-medium">Office</h1>
             <p className="text-gray-500">25 listings</p>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );

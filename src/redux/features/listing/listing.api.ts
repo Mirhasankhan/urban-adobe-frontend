@@ -18,10 +18,10 @@ const listingApi = baseApi.injectEndpoints({
     //     providesTags: ["listing"],
     // }),
     listings: builder.query({
-      query: ({ email, type }) => ({
+      query: ({ email, type, search }) => ({
         url: `/all-listings?${email ? `email=${email}&` : ""}${
-          type ? `type=${type}` : ""
-        }`,
+          type ? `type=${type}&` : ""
+        }${search ? `search=${search}` : ""}`,
         method: "GET",
       }),
       providesTags: ["listing"],
