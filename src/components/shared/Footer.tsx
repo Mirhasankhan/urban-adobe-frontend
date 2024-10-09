@@ -25,7 +25,7 @@ const Footer = () => {
             without any agent or commisions.
           </p>
         </div>
-        <div className="flex justify-evenly">
+        <div className="md:flex justify-evenly">
           <div>
             <h1 className="pb-4 font-medium">Company</h1>
             <div className="flex flex-col gap-1">
@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h1 className="pb-4 font-medium">Userful Links</h1>
+            <h1 className="pt-4 md:pt-0 pb-4 font-medium">Useful Links</h1>
             <div className="flex flex-col gap-1">
               <Link className="hover:text-gray-400" href="/">
                 Terms Of Services

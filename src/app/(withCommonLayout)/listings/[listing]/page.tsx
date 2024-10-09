@@ -23,7 +23,7 @@ const SingleListing = ({ params }: { params: { listing: string } }) => {
       .catch((error) => {
         console.error("Error making GET request:", error);
       });
-  }, []);
+  }, [params]);
 
   return (
     <div className="pt-16">

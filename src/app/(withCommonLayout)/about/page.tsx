@@ -6,7 +6,7 @@ import { RiDoubleQuotesR } from "react-icons/ri";
 const AboutUs = () => {
   return (
     <div className="pt-16 px-4 md:px-14">
-      <div className="grid grid-cols-5 gap-6 pt-6">
+      <div className="grid md:grid-cols-5 gap-6 pt-6">
         <div className="col-span-2">
           <video className="rounded-md" width="900" height="500" controls>
             <source src="/state.mov" type="video/mp4" />
@@ -14,7 +14,7 @@ const AboutUs = () => {
           </video>
         </div>
         <div className="col-span-3">
-          <h1 className="text-3xl font-medium pb-6 text-gray-500">
+          <h1 className="text-2xl md:text-4xl font-medium pb-6 text-gray-500">
             Efficiency. Transparency. <br />
             Control.
           </h1>
@@ -31,7 +31,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div>
-        <h1 className="text-center text-4xl font-medium py-12">
+        <h1 className="text-center text-2xl md:text-4xl font-medium py-12">
           Find Client&apos;s Feedback
         </h1>
         <div

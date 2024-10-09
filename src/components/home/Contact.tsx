@@ -37,7 +37,7 @@ const Contact = () => {
             <label htmlFor="">Name</label>
             <input
               required
-              className="p-3 rounded-lg block w-full mt-1 outline-none focus:outline-red-500"
+              className="p-3 rounded-lg block w-full mt-1 outline-none focus:outline-none"
               type="text"
               placeholder="Enter your name"
               name=""
@@ -48,7 +48,7 @@ const Contact = () => {
             <label htmlFor="">Email</label>
             <input
               required
-              className="p-3 rounded-lg block w-full mt-1 outline-none focus:outline-red-500"
+              className="p-3 rounded-lg block w-full mt-1 outline-none focus:outline-none"
               type="email"
               placeholder="Enter your email"
               name=""
@@ -61,7 +61,7 @@ const Contact = () => {
               required
               placeholder="Enter your message"
               rows={7}
-              className="p-3 rounded-lg block w-full mt-1 outline-none focus:outline-red-500"
+              className="p-3 rounded-lg block w-full mt-1 outline-none focus:outline-none"
               name=""
               id=""
             ></textarea>

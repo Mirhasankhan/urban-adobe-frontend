@@ -5,7 +5,11 @@ import { useListingsQuery } from "@/redux/features/listing/listing.api";
 import { TListing } from "@/types/common";
 
 const HomeListings = () => {
-  const { data: listings } = useListingsQuery("");
+  const { data: listings } = useListingsQuery({
+    email: null,
+    type: "",
+    search: "",
+  });
   return (
     <div className="px-4 md:px-14">
       <div className="text-center py-12">
