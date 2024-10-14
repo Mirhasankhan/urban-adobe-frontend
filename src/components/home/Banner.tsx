@@ -10,7 +10,7 @@ const Banner = () => {
 
   return (
     <div
-      className="h-screen bg-cover bg-center flex items-center justify-center"
+      className="h-[450px] md:h-[550px] bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
       <div className="bg-black w-full h-full md:pt-40 pt-24 bg-opacity-40">
@@ -23,20 +23,20 @@ const Banner = () => {
             <br /> agent or commisions.
           </p>
         </div>
-        <div className="mx-2 md:mx-auto md:w-2/4 bg-white py-1 px-1 mt-8  rounded-xl">
+        <div className="mx-2 md:mx-auto md:w-2/4 bg-white pl-3 pr-1 mt-8  rounded-full">
           <form className="flex relative justify-between items-center gap-2">
             <div className="absolute left-0 text-xl font-bold">
               <CiSearch className="font-medium"></CiSearch>
             </div>
             <input
               onChange={(e) => setCity(e.target.value)}
-              className=" rounded-md focus:outline-none p-2 pl-6"
+              className=" rounded-md focus:outline-none p-3 pl-6"
               type="text"
               placeholder="city,address,zip :"
             />
             <div
               onClick={() => router.push(`/listings?address=${city}`)}
-              className="bg-green-500  text-white text-center cursor-pointer py-2 px-2 rounded-md"
+              className="bg-green-600  text-white text-center font-medium cursor-pointer py-1 md:py-2 md:px-5 px-0.5 rounded-full"
             >
               Find Out
             </div>

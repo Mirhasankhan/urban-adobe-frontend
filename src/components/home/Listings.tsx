@@ -13,15 +13,13 @@ const HomeListings = () => {
   return (
     <div className="px-4 md:px-14">
       <div className="text-center py-12">
-        <h1 className="font-medium pb-3 text-xl">Featured Properties</h1>
-        <p className="text-gray-500">
-          A great plateform to buy, sell and rent your properties without any
-          agent or <br /> commisions.
-        </p>
+        <h1 className="font-medium pb-3 text-xl md:text-3xl">
+          Our Latest Properties
+        </h1>
       </div>
       <div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          {listings?.slice(0, 3).map((listing: TListing) => (
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+          {listings?.slice(0, 4).map((listing: TListing) => (
             <Card key={listing._id} listing={listing}></Card>
           ))}
         </div>

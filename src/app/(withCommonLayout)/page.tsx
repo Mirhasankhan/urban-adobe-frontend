@@ -3,6 +3,7 @@ import Banner from "@/components/home/Banner";
 import Categories from "@/components/home/Categories";
 import Contact from "@/components/home/Contact";
 import HomeListings from "@/components/home/Listings";
+import Location from "@/components/home/Location";
 
 const HomePage = () => {
   return (
@@ -11,7 +12,8 @@ const HomePage = () => {
       <HomeListings></HomeListings>
       <Categories></Categories>
       <Contact></Contact>
-      <About></About>
+      {/* <About></About> */}
+      <Location></Location>
     </div>
   );
 };

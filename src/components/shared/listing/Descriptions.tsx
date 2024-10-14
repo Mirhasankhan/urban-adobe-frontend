@@ -13,9 +13,9 @@ import { LuMessagesSquare } from "react-icons/lu";
 const Descriptions = ({ property }: { property: TListing }) => {
   const { description, bedroom, bathroom, size } = property;
   return (
-    <div className="pr-24">
+    <div className="md:pr-24">
       <div className="flex justify-between items-center mb-12">
-        <div className="flex gap-6 items-center">
+        <div className="md:flex gap-6 items-center">
           <h1 className="bg-red-400 text-white rounded-md px-4 py-2 font-medium">
             For {property.for}
           </h1>
@@ -64,7 +64,7 @@ const Descriptions = ({ property }: { property: TListing }) => {
       <h1 className="font-semibold mb-4 text-xl border-l-2 border-red-400 pl-3">
         Properties Amenities:
       </h1>
-      <div className="flex gap-16">
+      <div className="md:flex gap-16">
         <div>
           <div className="flex gap-1 items-center">
             <GiCheckMark className="text-red-500 text-xl"></GiCheckMark>

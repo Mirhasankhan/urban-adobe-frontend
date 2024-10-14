@@ -6,16 +6,16 @@ import Navigate from "./Navigate";
 
 const Header = () => {
   return (
-    <div className="fixed bg-black bg-opacity-40 top-0 left-0 right-0 px-4 md:px-14 flex justify-between h-16 items-center text-white">
+    <div className="fixed bg-black bg-opacity-40 top-0 left-0 right-0 px-4 md:px-14 flex justify-between h-16 items-center text-white z-30">
       <Link href="/" className="flex gap-1 items-center">
         <Image
           src={logo}
-          width={40}
-          height={40}
+          width={50}
+          height={50}
           className="rounded-md"
           alt="logo"
         ></Image>
-        <h1 className="font-medium">Urban Adobe</h1>
+        <h1 className="font-medium">UrbanAdobE</h1>
       </Link>
       <Navigate></Navigate>
     </div>
