@@ -7,11 +7,16 @@ import React from "react";
 const SellerDashboard = () => {
   const user = JWTDecode();
   const email = user?.email;
-  const { data: listings } = useListingsQuery(email);
+  const { data: listings } = useListingsQuery({
+    email: email,
+    type: "",
+    search: "",
+  });
 
   const forSell = listings?.filter(
     (listing: { for: string }) => listing.for !== "rent"
   );
+
   const forRent = listings?.filter(
     (listing: { for: string }) => listing.for == "rent"
   );
@@ -19,19 +24,19 @@ const SellerDashboard = () => {
   return (
     <div>
       <h1 className="py-4 text-2xl font-medium pl-6">Manage Your Dashboard</h1>
-      <div className="flex justify-between p-4">
-        <div className=" py-2 px-6 rounded-md font-medium text-white bg-orange-400">
-          <h1>Total Property</h1>
-          <p className="text-center pt-2">{listings?.length} property</p>
+      <div className="md:flex gap-8 p-4">
+        <div className=" py-2 px-6 text-center w-full rounded-md font-medium text-white bg-orange-400">
+          <h1 className="font-medium text-xl">Total Property</h1>
+          <p className=" pt-2">{listings?.length} property</p>
         </div>
-        <div className="bg-white p-2 rounded-md">Total Income</div>
-        <div className="bg-purple-500 py-2 px-6 font-medium text-white rounded-md">
-          <h1>Property For Rent</h1>
-          <p className="text-center pt-2">{forRent?.length} property</p>
+
+        <div className="bg-purple-500 text-center my-2 md:my-0 w-full py-2 px-6 font-medium text-white rounded-md">
+          <h1 className="font-medium text-xl">Property For Rent</h1>
+          <p className="pt-2">{forRent?.length} property</p>
         </div>
-        <div className="bg-cyan-400 text-white font-medium p-2 rounded-md">
-          <h1>Property For Sell</h1>
-          <p className="text-center pt-2"> {forSell?.length} property</p>
+        <div className="bg-cyan-400 text-white text-center w-full font-medium p-2 rounded-md">
+          <h1 className="font-medium text-xl">Property For Sell</h1>
+          <p className=" pt-2"> {forSell?.length} property</p>
         </div>
       </div>
       <PieChart></PieChart>

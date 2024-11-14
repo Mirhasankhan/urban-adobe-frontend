@@ -33,7 +33,6 @@ const AddProperty = () => {
         },
         sellerName: user?.name,
         sellerEmail: user?.email,
-        for: "rent",
       };
       const response = await createListing(newListing);
       toast.success(response.data.message);
@@ -43,7 +42,7 @@ const AddProperty = () => {
     }
   };
   return (
-    <div className="p-6 h-screen">
+    <div className="p-6 min-h-screen">
       <h1 className="font-medium text-xl">Add New Property</h1>
       <p className="text-gray-500">We are glad to see you again!</p>
       <form
@@ -164,7 +163,20 @@ const AddProperty = () => {
               </div>
             </div>
             <div className="grid grid-cols-3 gap-3">
-              <div className="col-span-1">
+              <div className="w-full">
+                <label className="block pb-2" htmlFor="type">
+                  Listing For
+                </label>
+                <select
+                  {...register("for", { required: true })}
+                  className="border w-full p-2 rounded-md"
+                  id="for"
+                >
+                  <option value="sell">Sell</option>
+                  <option value="rent">Rent</option>
+                </select>
+              </div>
+              {/* <div className="col-span-1">
                 <label className="block" htmlFor="">
                   Year Built
                 </label>
@@ -173,7 +185,7 @@ const AddProperty = () => {
                   type="date"
                   {...register("year", { required: true })}
                 />
-              </div>
+              </div> */}
               {/* <div>
                                 <label className="block" htmlFor="">Video URL</label>
                                 <input className="border p-2 w-full rounded-md mt-1 focus:outline-none focus:border-green-500" placeholder="size in sqf" type="url" {...register("video")} />

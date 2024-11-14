@@ -21,7 +21,7 @@ const Descriptions = ({ property }: { property: TListing }) => {
           </h1>
           <div className="flex items-center gap-1">
             <CgCalendarDates className="text-red-600 text-xl"></CgCalendarDates>
-            <h1>Built 2 Years Ago</h1>
+            <h1 className="py-1">Built 2 Years Ago</h1>
           </div>
           <div className="flex items-center gap-1">
             <LuMessagesSquare className="text-red-600 text-xl"></LuMessagesSquare>
@@ -43,28 +43,28 @@ const Descriptions = ({ property }: { property: TListing }) => {
           <Image src={bed.src} height={60} width={60} alt=""></Image>
           <div>
             <h1 className="text-red-600 font-medium">{bedroom}</h1>
-            <p>Bedrooms</p>
+            <p className="hidden md:block">Bedrooms</p>
           </div>
         </div>
         <div className="flex gap-2 items-center">
           <Image src={car.src} height={60} width={60} alt=""></Image>
           <div>
             <h1 className="text-red-600 font-medium">{bathroom}</h1>
-            <p>Car Parking</p>
+            <p className="hidden md:block">Car Parking</p>
           </div>
         </div>
         <div className="flex gap-2 items-center">
-          <Image src={sqf.src} height={60} width={60} alt=""></Image>
+          <Image src={sqf.src} height={50} width={50} alt=""></Image>
           <div>
             <h1 className="text-red-600 font-medium">{size}</h1>
-            <p>Square Feet</p>
+            <p className="hidden md:block">Square Feet</p>
           </div>
         </div>
       </div>
-      <h1 className="font-semibold mb-4 text-xl border-l-2 border-red-400 pl-3">
+      <h1 className="font-semibold hidden md:block  mb-4 text-xl border-l-2 border-red-400 pl-3">
         Properties Amenities:
       </h1>
-      <div className="md:flex gap-16">
+      <div className="md:flex gap-16 hidden  ">
         <div>
           <div className="flex gap-1 items-center">
             <GiCheckMark className="text-red-500 text-xl"></GiCheckMark>

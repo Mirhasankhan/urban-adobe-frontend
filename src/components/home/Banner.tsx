@@ -24,19 +24,19 @@ const Banner = () => {
           </p>
         </div>
         <div className="mx-2 md:mx-auto md:w-2/4 bg-white pl-3 pr-1 mt-8  rounded-full">
-          <form className="flex relative justify-between items-center gap-2">
+          <form className=" relative grid grid-cols-3 p-1 items-center gap-2">
             <div className="absolute left-0 text-xl font-bold">
               <CiSearch className="font-medium"></CiSearch>
             </div>
             <input
               onChange={(e) => setCity(e.target.value)}
-              className=" rounded-md focus:outline-none p-3 pl-6"
+              className="col-span-2 rounded-md focus:outline-none pl-6"
               type="text"
               placeholder="city,address,zip :"
             />
             <div
               onClick={() => router.push(`/listings?address=${city}`)}
-              className="bg-green-600  text-white text-center font-medium cursor-pointer py-1 md:py-2 md:px-5 px-0.5 rounded-full"
+              className="bg-green-600 col-span-1  text-white text-center font-medium cursor-pointer py-1 md:py-2 md:px-5 px-0.5 rounded-full"
             >
               Find Out
             </div>

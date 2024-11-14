@@ -5,9 +5,28 @@ import list2 from "../../assets/list2.jpg";
 import list3 from "../../assets/list3.jpg";
 import list4 from "../../assets/list4.jpg";
 import { useRouter } from "next/navigation";
+import { useListingsQuery } from "@/redux/features/listing/listing.api";
 
 const Categories = () => {
   const router = useRouter();
+
+  const { data: listings } = useListingsQuery({
+    email: null,
+    type: "",
+    search: "",
+  });
+  const totalShop = listings?.filter(
+    (listing: { type: string }) => listing.type == "shop"
+  );
+  const totalFamily = listings?.filter(
+    (listing: { type: string }) => listing.type == "family"
+  );
+  const totalBachelor = listings?.filter(
+    (listing: { type: string }) => listing.type == "bachelor"
+  );
+  const totalOffice = listings?.filter(
+    (listing: { type: string }) => listing.type == "office"
+  );
 
   const family = `/listings?category=family`;
   const bachelor = `/listings?category=bachelor`;
@@ -17,7 +36,9 @@ const Categories = () => {
   return (
     <div className="px-4 md:px-14">
       <div className="text-center py-12">
-        <h1 className="font-medium pb-3 text-xl">Listing Categories</h1>
+        <h1 className="font-semibold md:text-3xl pb-3 text-xl">
+          Listing Categories
+        </h1>
         <p className="text-gray-500">
           A great plateform to buy, sell and rent your properties without any
           agent or <br /> commisions.
@@ -37,7 +58,7 @@ const Categories = () => {
           ></Image>
           <div className="p-3">
             <h1 className="text-xl font-medium">Family</h1>
-            <p className="text-gray-500">48 listings</p>
+            <p className="text-gray-500">{totalFamily?.length} listings</p>
           </div>
         </div>
         <div
@@ -53,7 +74,7 @@ const Categories = () => {
           ></Image>
           <div className="p-3">
             <h1 className="text-xl font-medium">Shop</h1>
-            <p className="text-gray-500">90 listings</p>
+            <p className="text-gray-500">{totalShop?.length} listings</p>
           </div>
         </div>
         <div
@@ -69,7 +90,7 @@ const Categories = () => {
           ></Image>
           <div className="p-3">
             <h1 className="text-xl font-medium">Bachelor</h1>
-            <p className="text-gray-500">150 listings</p>
+            <p className="text-gray-500">{totalBachelor?.length} listings</p>
           </div>
         </div>
         <div
@@ -85,7 +106,7 @@ const Categories = () => {
           ></Image>
           <div className="p-3">
             <h1 className="text-xl font-medium">Office</h1>
-            <p className="text-gray-500">25 listings</p>
+            <p className="text-gray-500">{totalOffice?.length} listings</p>
           </div>
         </div>
       </div>

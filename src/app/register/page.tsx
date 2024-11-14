@@ -41,20 +41,21 @@ const Register = () => {
       style={{ backgroundImage: `url(${bgImag.src})` }}
     >
       <form
-        className="bg-white rounded-md p-4 w-5/6 md:w-1/3 mx-auto"
+        className="bg-white rounded-md p-2 md:p-4 w-5/6 md:w-1/3 mx-auto"
         onSubmit={handleSubmit(onSubmit)}
       >
         <Link href={"/"}>
-          {" "}
           <Image
-            className="mx-auto rounded-full"
+            className="mx-auto rounded-xl"
             src={logo}
             height={60}
             width={60}
             alt="logo"
           ></Image>
         </Link>
-        <h1 className="text-2xl font-medium py-5">Register Your Account</h1>
+        <h1 className="md:text-2xl font-medium py-3 md:py-5">
+          Register Your Account
+        </h1>
         <div>
           <label className="block" htmlFor="">
             Your Name
@@ -66,7 +67,7 @@ const Register = () => {
             {...register("name", { required: true })}
           />
         </div>
-        <div className="py-4">
+        <div className="py-2 md:py-4">
           <label className="block" htmlFor="">
             Email Address
           </label>

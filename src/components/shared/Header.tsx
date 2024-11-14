@@ -10,12 +10,12 @@ const Header = () => {
       <Link href="/" className="flex gap-1 items-center">
         <Image
           src={logo}
-          width={50}
-          height={50}
+          width={40}
+          height={40}
           className="rounded-md"
           alt="logo"
         ></Image>
-        <h1 className="font-medium">UrbanAdobE</h1>
+        <h1 className="font-semibold ">UrbanAdobe</h1>
       </Link>
       <Navigate></Navigate>
     </div>

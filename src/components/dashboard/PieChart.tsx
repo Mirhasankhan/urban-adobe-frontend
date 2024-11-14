@@ -16,7 +16,11 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const PieChart: React.FC = () => {
   const user = JWTDecode();
   const email = user?.email;
-  const { data: listings } = useListingsQuery(email);
+  const { data: listings } = useListingsQuery({
+    email: email,
+    type: "",
+    search: "",
+  });
 
   const chartRef = useRef<ChartJS<"pie", number[], string> | null>(null);
 
@@ -56,7 +60,7 @@ const PieChart: React.FC = () => {
 
   return (
     <div className="max-w-md mx-auto">
-      <h2 className="text-xl font-bold mb-4 mt-24">
+      <h2 className="text-xl text-center font-bold mb-4 mt-12">
         Property List With Category
       </h2>
       <Pie data={data} ref={chartRef} />

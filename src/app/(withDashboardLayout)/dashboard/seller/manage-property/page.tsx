@@ -14,10 +14,14 @@ import { Button } from "antd";
 const ManageProperty = () => {
   const user = JWTDecode();
   const email = user?.email;
-  const { data: listings } = useListingsQuery(email);
+  const { data: listings } = useListingsQuery({
+    email: email,
+    type: "",
+    search: "",
+  });
   const { data: buys } = useAllBuysQuery("");
   return (
-    <div className="p-6 h-screen">
+    <div className="p-2 md:p-6 min-h-screen">
       <h1 className="font-medium text-xl">Manage Your Properties</h1>
       <p className="text-gray-500 pb-6">We are glad to see you again!</p>
       {listings?.length > 0 ? (

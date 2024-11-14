@@ -34,7 +34,6 @@ const Login = () => {
       localStorage.setItem("token", response.data.token);
       router.push("/");
     } catch (err: any) {
-      console.log(err);
       toast.error(err.response.data.message);
     }
     reset();
@@ -50,15 +49,17 @@ const Login = () => {
       >
         <Link href={"/"}>
           <Image
-            className="mx-auto rounded-full"
+            className="mx-auto rounded-xl"
             src={logo}
             height={60}
             width={60}
             alt="logo"
           ></Image>
         </Link>
-        <h1 className="text-2xl font-medium py-5">Login Your Account</h1>
-        <div className="py-4">
+        <h1 className="md:text-2xl font-medium py-2 md:py-4">
+          Login Your Account
+        </h1>
+        <div className="py-2 md:py-4">
           <label className="block" htmlFor="">
             Email Address
           </label>

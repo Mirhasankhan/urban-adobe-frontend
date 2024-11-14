@@ -22,7 +22,7 @@ const BuyProperty = ({ property }: { property: TListing }) => {
   );
   const user = JWTDecode();
   const { sellerName, sellerEmail, price } = property;
-  console.log(property);
+
   const handleMakeBuyProposal = async (data: TListing) => {
     const { _id, ...rest } = data;
     try {
@@ -74,7 +74,11 @@ const BuyProperty = ({ property }: { property: TListing }) => {
           <button
             disabled={isBrought !== undefined}
             onClick={() => handleMakeBuyProposal(property)}
-            className="bg-green-600 py-2 rounded-md text-white font-medium w-full mt-4 hover:bg-green-700"
+            className={`${
+              isBrought !== undefined
+                ? "bg-gray-500"
+                : "bg-green-600 hover:bg-green-700"
+            } py-2 rounded-md text-white font-medium w-full mt-4`}
           >
             {isBrought == undefined
               ? "Make Buy Proposal"

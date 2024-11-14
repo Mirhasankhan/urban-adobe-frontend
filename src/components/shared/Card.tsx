@@ -25,7 +25,12 @@ const Card = ({ listing }: { listing: TListing }) => {
         />
       </div>
       <div>
-        <p className="font-medium text-xl py-2">{listing.title}</p>
+        <p className="font-medium text-xl py-2">
+          {listing.title.length > 23
+            ? listing.title.substring(0, 23) + "..."
+            : listing.title}
+        </p>
+
         <div className="flex items-center gap-1">
           <MdLocationPin className="text-red-500"></MdLocationPin>
           <p className="text-sm">{listing.address}</p>

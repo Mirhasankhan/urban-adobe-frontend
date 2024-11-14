@@ -2,6 +2,11 @@ import Image from "next/image";
 import client1 from "../../../assets/cam.png";
 import client2 from "../../../assets/will.png";
 import { RiDoubleQuotesR } from "react-icons/ri";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Urban Adobe | About",
+};
 
 const AboutUs = () => {
   return (

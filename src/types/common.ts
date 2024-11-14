@@ -17,9 +17,13 @@ export type Inputs = {
   bedroom: string;
   kitchen: string;
   video?: string;
-  year?: string;
+  for?: string;
   type: string;
   image: string;
+  email?: string;
+  name?: string;
+  phone?: number;
+  location?: string;
 };
 
 export type TRoles = keyof typeof userRoles;

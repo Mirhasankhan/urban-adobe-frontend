@@ -10,7 +10,6 @@ import { TListing } from "@/types/common";
 
 const SingleListing = ({ params }: { params: { listing: string } }) => {
   const [listings, setListings] = useState<TListing>({} as TListing);
-  console.log(listings);
 
   useEffect(() => {
     axios
@@ -33,7 +32,7 @@ const SingleListing = ({ params }: { params: { listing: string } }) => {
           backgroundImage: `url(${listings?.image?.imageUrl || imagse.src})`,
         }}
       >
-        <div className="bg-black bg-opacity-50 p-12 text-white md:ml-12 mx-2 rounded-lg">
+        <div className="bg-black bg-opacity-50 p-4 md:p-12 text-white md:ml-12 mx-2 rounded-lg">
           <div className="flex justify-between items-center gap-24">
             <h1 className="font-medium text-xl">{listings.title}</h1>
             <h1 className="text-red-500 text-xl font-medium">

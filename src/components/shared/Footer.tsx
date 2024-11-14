@@ -21,11 +21,15 @@ const Footer = () => {
             <h1 className="font-medium">Urban Adobe</h1>
           </div>
           <p className="pt-4 text-sm">
-            A great plateform to buy, sell and rent your <br /> properties
-            without any agent or commisions.
+            Welcome to Urban Adobe your go-to platform for buying, selling, and
+            renting properties with zero agents and no commissions. Connect
+            directly with property owners and tenants for a seamless,
+            transparent experience. Explore extensive listings and enjoy secure,
+            hassle-free transactions, all in one place. Your next property
+            journey starts here!
           </p>
         </div>
-        <div className="md:flex justify-evenly">
+        <div className="flex justify-between md:justify-evenly">
           <div>
             <h1 className="pb-4 font-medium">Company</h1>
             <div className="flex flex-col gap-1">
@@ -44,7 +48,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h1 className="pt-4 md:pt-0 pb-4 font-medium">Useful Links</h1>
+            <h1 className=" pb-4 font-medium">Useful Links</h1>
             <div className="flex flex-col gap-1">
               <Link className="hover:text-gray-400" href="/">
                 Terms Of Services
