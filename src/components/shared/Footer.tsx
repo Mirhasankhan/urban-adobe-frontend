@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo5.jpeg";
 import Link from "next/link";
 import { CiLocationOn } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
@@ -15,7 +15,7 @@ const Footer = () => {
               src={logo}
               width={40}
               height={40}
-              className="rounded-md"
+              className="rounded-full"
               alt="logo"
             ></Image>
             <h1 className="font-medium">Urban Adobe</h1>

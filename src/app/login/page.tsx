@@ -1,7 +1,7 @@
 "use client";
 import { useForm, SubmitHandler } from "react-hook-form";
 import bgImag from "../../assets/property.avif";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo5.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

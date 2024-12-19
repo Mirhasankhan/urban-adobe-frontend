@@ -24,7 +24,7 @@ const ListingsContent = () => {
   };
   if (isLoading) {
     return (
-      <div className="pt-24 mx-auto">
+      <div className="mx-auto">
         <Image
           src="https://i.stack.imgur.com/hzk6C.gif"
           width={500}
@@ -37,7 +37,7 @@ const ListingsContent = () => {
   }
 
   return (
-    <div className="pt-16 px-4 md:px-14">
+    <div className=" px-4 md:px-14">
       <div className="md:flex justify-between items-center mt-6">
         <div>
           <h1 className="text-2xl md:text-3xl text-center font-medium">

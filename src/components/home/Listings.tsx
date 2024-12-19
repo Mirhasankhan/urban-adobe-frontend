@@ -3,6 +3,7 @@ import Card from "../shared/Card";
 import Link from "next/link";
 import { useListingsQuery } from "@/redux/features/listing/listing.api";
 import { TListing } from "@/types/common";
+import LoadingCard from "../shared/LoadingCard";
 
 const HomeListings = () => {
   const { data: listings, isLoading } = useListingsQuery({
@@ -19,23 +20,22 @@ const HomeListings = () => {
         </h1>
       </div>
       <div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-          {listings?.slice(0, 4).map((listing: TListing) => (
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {listings?.slice(0, 3).map((listing: TListing) => (
             <Card key={listing._id} listing={listing}></Card>
           ))}
         </div>
         {!listings && (
           <div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-4 mt-4">
-              <h1 className="h-80 bg-gradient-to-b from-gray-500 to-gray-900 rounded-md"></h1>
-              <h1 className="h-80 bg-gradient-to-b from-gray-500 to-gray-900 rounded-md"></h1>
-              <h1 className="h-80 bg-gradient-to-b from-gray-500 to-gray-900 rounded-md"></h1>
-              <h1 className="h-80 bg-gradient-to-b from-gray-500 to-gray-900 rounded-md"></h1>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mt-4">
+              <LoadingCard></LoadingCard>
+              <LoadingCard></LoadingCard>
+              <LoadingCard></LoadingCard>
             </div>
           </div>
         )}
         <Link className="flex justify-center" href="/listings">
-          <button className="bg-orange-400 mt-5 font-medium p-2 text-white rounded-md">
+          <button className="bg-[#06a788] mt-5 font-medium px-4 py-2 text-white rounded-md">
             View All Listings
           </button>
         </Link>

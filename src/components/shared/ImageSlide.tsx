@@ -34,8 +34,8 @@ const BannerSlide = () => {
   };
 
   return (
-    <div className="p-2">
-      <div className="slider-container mt-4">
+    <div>
+      <div className="slider-container mt-2">
         <Slider {...settings}>
           <div className=" p-2 ">
             <img

@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import bg from "../../assets/home.png";
+import bg from "../../assets/profile.jpg";
 import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
 
@@ -15,8 +15,8 @@ const Banner = () => {
     >
       <div className="bg-black w-full h-full md:pt-40 pt-24 bg-opacity-40">
         <div className="text-white text-center">
-          <h1 className="text-2xl md:text-4xl font-bold pb-6">
-            Find Your Perfect <br />& Wonderful Home
+          <h1 className="text-2xl md:text-5xl font-bold pb-6">
+            Find Your Perfect And <br /> Wonderful Home
           </h1>
           <p className="text-gray-100">
             A great plateform to buy, sell and rent your properties without any
@@ -36,7 +36,7 @@ const Banner = () => {
             />
             <div
               onClick={() => router.push(`/listings?address=${city}`)}
-              className="bg-green-600 col-span-1  text-white text-center font-medium cursor-pointer py-1 md:py-2 md:px-5 px-0.5 rounded-full"
+              className="bg-[#06a788] col-span-1  text-white text-center font-medium cursor-pointer py-1 md:py-2 md:px-5 px-0.5 rounded-full"
             >
               Find Out
             </div>

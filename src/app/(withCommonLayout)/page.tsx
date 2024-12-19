@@ -1,9 +1,8 @@
-import About from "@/components/home/About";
 import Banner from "@/components/home/Banner";
 import Categories from "@/components/home/Categories";
-import Contact from "@/components/home/Contact";
 import HomeListings from "@/components/home/Listings";
 import Location from "@/components/home/Location";
+import WhyUs from "@/components/home/WhyUs";
 
 const HomePage = () => {
   return (
@@ -11,7 +10,8 @@ const HomePage = () => {
       <Banner></Banner>
       <HomeListings></HomeListings>
       <Categories></Categories>
-      <Contact></Contact>
+      <WhyUs></WhyUs>
+      {/* <Contact></Contact> */}
       {/* <About></About> */}
       <Location></Location>
     </div>
