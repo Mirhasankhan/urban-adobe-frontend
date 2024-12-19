@@ -23,6 +23,9 @@ const Navigate = () => {
           <Link className="hover:text-[#06a788] text-[18px]" href={"/listings"}>
             Properties
           </Link>
+          <Link className="hover:text-[#06a788] text-[18px]" href={"/agencies"}>
+            Agencies
+          </Link>
           <Link className="hover:text-[#06a788] text-[18px]" href={"/about"}>
             About
           </Link>

@@ -1,7 +1,7 @@
 "use client";
 import { useForm, SubmitHandler } from "react-hook-form";
 import bgImag from "../../assets/room1.webp";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo5.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -53,16 +53,14 @@ const SellerRegister = () => {
             alt="logo"
           ></Image>
         </Link>
-        <h1 className="md:text-2xl font-medium py-5">
-          Register Your Seller Account
-        </h1>
+        <h1 className="md:text-2xl font-medium py-5">Register Your Agency</h1>
         <div>
           <label className="block" htmlFor="">
-            Your Name
+            Agency Name
           </label>
           <input
             className="border p-1 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
-            placeholder="your Name"
+            placeholder="agency name"
             type="text"
             {...register("name", { required: true })}
           />
@@ -73,7 +71,7 @@ const SellerRegister = () => {
           </label>
           <input
             className="border p-1 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
-            placeholder="name@gmail.com"
+            placeholder="agency@gmail.com"
             type="email"
             {...register("email", { required: true })}
           />
@@ -96,7 +94,7 @@ const SellerRegister = () => {
           </h1>
         </div>
         <button
-          className="bg-green-500 py-2 rounded-md mt-3 text-white w-full"
+          className="bg-[#06a788] py-2 rounded-md mt-3 text-white w-full"
           type="submit"
         >
           Create Account

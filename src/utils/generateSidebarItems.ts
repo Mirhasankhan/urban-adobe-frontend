@@ -63,7 +63,7 @@ export const sidebarItems = (role: TRoles): SidbarItem[] => {
         icon: MdDashboard,
       }),
         roleMenus.push({
-          title: "My Buys",
+          title: "My Proposals",
           path: `/${role}/my-buys`,
           icon: GoPackage,
         }),

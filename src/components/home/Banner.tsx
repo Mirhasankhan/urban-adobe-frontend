@@ -19,8 +19,7 @@ const Banner = () => {
             Find Your Perfect And <br /> Wonderful Home
           </h1>
           <p className="text-gray-100">
-            A great plateform to buy, sell and rent your properties without any
-            <br /> agent or commisions.
+            A great plateform to buy, sell and rent your properties
           </p>
         </div>
         <div className="mx-2 md:mx-auto md:w-2/4 bg-white pl-3 pr-1 mt-8  rounded-full">

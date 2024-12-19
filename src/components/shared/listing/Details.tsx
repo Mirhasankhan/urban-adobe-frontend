@@ -27,8 +27,13 @@ const Details = ({ property }: { property: TListing }) => {
           </div>
         </div>
         <div>
-          <h1 className="text-2xl font-semibold">${price}</h1>
-          <h1>{size}/sq ft</h1>
+          <h1 className="text-2xl font-semibold">
+            ${price}
+            <span className={`${property.for !== "rent" && "hidden"}`}>
+              /monthly
+            </span>
+          </h1>
+          <h1 className="text-end">{size}/sq ft</h1>
         </div>
       </div>
       <div className="py-6 grid grid-cols-5 gap-4">
