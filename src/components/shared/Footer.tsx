@@ -7,7 +7,7 @@ import { FiPhone } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <div className="bg-[#0F172A] text-white">
+    <div className="bg-[#004274] text-white">
       <div className="grid md:grid-cols-3 grid-cols-1 px-4 md:px-14 py-8 md:py-16 gap-6 ">
         <div>
           <div className="flex gap-1 items-center">

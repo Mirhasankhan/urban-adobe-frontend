@@ -59,3 +59,11 @@ export type TListing = {
     imageUrl: string;
   };
 };
+
+export type TReview = {
+  title: string;
+  email: string;
+  message: string;
+  rating: number;
+  image: string;
+};

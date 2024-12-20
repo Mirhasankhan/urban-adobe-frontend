@@ -45,8 +45,8 @@ const buyPropertyApi = baseApi.injectEndpoints({
       invalidatesTags: ["buying"],
     }),
     allUsers: builder.query({
-      query: () => ({
-        url: `/users`,
+      query: (email) => ({
+        url: `/users?email=${email}`,
         method: "GET",
       }),
       providesTags: ["buying"],

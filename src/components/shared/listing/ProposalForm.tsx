@@ -130,6 +130,11 @@ const ProposalForm = ({ property }: { property: TListing }) => {
           </button>
         )}
       </form>
+      {user?.role !== "buyer" && (
+        <h1 className="text-red-400">
+          Warning: login with a buyer account to send proposals
+        </h1>
+      )}
     </div>
   );
 };
