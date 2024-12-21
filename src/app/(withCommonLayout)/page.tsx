@@ -10,7 +10,9 @@ const HomePage = () => {
       <Banner></Banner>
       <HomeListings></HomeListings>
       <Categories></Categories>
-      <WhyUs></WhyUs>
+      <div className="hidden md:block">
+        <WhyUs></WhyUs>
+      </div>
       {/* <Contact></Contact> */}
       {/* <About></About> */}
       <Location></Location>

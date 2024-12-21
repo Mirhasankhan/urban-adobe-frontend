@@ -45,10 +45,10 @@ const Categories = () => {
           agent or <br /> commisions.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
         <div
           onClick={() => router.push(family)}
-          className="h-[150px] md:h-[380px] cursor-pointer bg-cover bg-center rounded-md text-white"
+          className="h-[230px] md:h-[380px] cursor-pointer bg-cover bg-center rounded-md text-white"
           style={{ backgroundImage: `url(${list1.src})` }}
         >
           <div className="bg-black rounded-md hover:bg-transparent w-full h-full flex flex-col bg-opacity-20">
@@ -64,7 +64,7 @@ const Categories = () => {
         </div>
         <div
           onClick={() => router.push(office)}
-          className="h-[150px] md:h-[380px] cursor-pointer bg-cover bg-center rounded-md text-white"
+          className="h-[230px] md:h-[380px] cursor-pointer bg-cover bg-center rounded-md text-white"
           style={{ backgroundImage: `url(${list2.src})` }}
         >
           <div className="bg-black rounded-md hover:bg-transparent w-full h-full flex flex-col bg-opacity-20">
@@ -80,7 +80,7 @@ const Categories = () => {
         </div>
         <div
           onClick={() => router.push(bachelor)}
-          className="h-[150px] md:h-[380px] cursor-pointer bg-cover bg-center rounded-md text-white"
+          className="h-[230px] md:h-[380px] cursor-pointer bg-cover bg-center rounded-md text-white"
           style={{ backgroundImage: `url(${list3.src})` }}
         >
           <div className="bg-black rounded-md hover:bg-transparent w-full h-full flex flex-col bg-opacity-20">
@@ -96,7 +96,7 @@ const Categories = () => {
         </div>
         <div
           onClick={() => router.push(shop)}
-          className="h-[150px] md:h-[380px] cursor-pointer bg-cover bg-center rounded-md text-white"
+          className="h-[230px] md:h-[380px] cursor-pointer bg-cover bg-center rounded-md text-white"
           style={{ backgroundImage: `url(${list4.src})` }}
         >
           <div className="bg-black rounded-md hover:bg-transparent w-full h-full flex flex-col bg-opacity-20">

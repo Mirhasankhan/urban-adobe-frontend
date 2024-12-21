@@ -38,7 +38,7 @@ const WhyUs = () => {
         </div>
         <div className="flex flex-col border-r items-center p-4">
           <Image height={50} width={50} src={img3} alt=""></Image>
-          <p className="text-xl font-semibold py-4">Find Your Home</p>
+          <p className="text-xl font-semibold py-4">Financial Reporting</p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
             voluptatum, quae doloremque ab ea enim laudantium repellat! Veniam,
@@ -47,7 +47,7 @@ const WhyUs = () => {
         </div>
         <div className="flex flex-col items-center p-4">
           <Image height={50} width={50} src={img4} alt=""></Image>
-          <p className="text-xl font-semibold py-4">Find Your Home</p>
+          <p className="text-xl font-semibold py-4">Capital Improvements</p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
             voluptatum, quae doloremque ab ea enim laudantium repellat! Veniam,

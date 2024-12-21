@@ -81,8 +81,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-center pb-2">
-        © 2024 Urban Adobe. Design & Develop with by Mir Hasan.
+      <h1 className="text-sm text-center pb-2">
+        © 2024 Urban Adobe. Design by Mir Hasan.
       </h1>
     </div>
   );

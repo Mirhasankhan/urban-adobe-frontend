@@ -53,6 +53,7 @@ export type TListing = {
   name: string;
   email: string;
   refId: string;
+  phone: string;
   sellerName: string;
   sellerEmail: string;
   image: {

@@ -48,12 +48,12 @@ const Header = () => {
           // </Link>
           <div
             onClick={() => setOpen(!open)}
-            className="flex  cursor-pointer items-center gap-1 border p-1 rounded-md"
+            className="flex  cursor-pointer items-center gap-1 md:border p-1 rounded-md"
           >
             <div className="border rounded-xl p-2">
               <FaRegUser></FaRegUser>
             </div>
-            <div className="flex items-center">
+            <div className="hidden md:flex items-center">
               <h1>{name}</h1>
               <FaCaretDown></FaCaretDown>
             </div>

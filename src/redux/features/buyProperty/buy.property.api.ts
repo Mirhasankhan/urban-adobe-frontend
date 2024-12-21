@@ -49,7 +49,15 @@ const buyPropertyApi = baseApi.injectEndpoints({
         url: `/users?email=${email}`,
         method: "GET",
       }),
-      providesTags: ["buying"],
+      providesTags: ["user"],
+    }),
+    updateUser: builder.mutation({
+      query: ({ userId, phone, address }) => ({
+        url: `/users/${userId}`,
+        method: "PUT",
+        body: { phone, address },
+      }),
+      invalidatesTags: ["user"],
     }),
   }),
 });
@@ -62,4 +70,5 @@ export const {
   useUpdateBuyStatusMutation,
   useAllSalesQuery,
   useAllUsersQuery,
+  useUpdateUserMutation,
 } = buyPropertyApi;

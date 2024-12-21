@@ -59,7 +59,7 @@ const Card = ({ listing }: { listing: TListing }) => {
           </p>
         </div>
 
-        <p className="absolute left-4 top-4 text-sm font-medium bg-gray-400 text-white px-3 py-1 rounded-lg z-20">
+        <p className="absolute left-4 top-4  font-medium bg-[#06a788] text-white px-3 py-1 rounded-lg z-20">
           For {listing.for}
         </p>
       </div>

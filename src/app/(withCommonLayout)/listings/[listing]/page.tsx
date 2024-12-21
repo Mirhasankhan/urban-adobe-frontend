@@ -42,10 +42,10 @@ const SingleListing = ({ params }: { params: { listing: string } }) => {
         <Details property={listings}></Details>
       </div>
       <div className="bg-gray-100 grid grid-cols-6 gap-4">
-        <div className="col-span-4">
+        <div className="col-span-6 md:col-span-4">
           <Overview property={listings}></Overview>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-6 md:col-span-2">
           <Proposal property={listings}></Proposal>
         </div>
       </div>

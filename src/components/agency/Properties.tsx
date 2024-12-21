@@ -19,7 +19,7 @@ const Properties = ({ email }: { email: string }) => {
         <div className="flex gap-2 my-5">
           <button
             onClick={() => setCurrent("lists")}
-            className={`flex px-24 py-4 text-xl rounded-md text-[#06a788] border border-[#06a788] ${
+            className={`flex px-8 md:px-24 md:py-4 py-2 text-xl rounded-md text-[#06a788] border border-[#06a788] ${
               current === "lists" ? "bg-[#06a788] text-white" : "bg-transparent"
             }`}
           >
@@ -27,7 +27,7 @@ const Properties = ({ email }: { email: string }) => {
           </button>
           <button
             onClick={() => setCurrent("review")}
-            className={`flex px-24 py-4 text-xl rounded-md text-[#06a788] border border-[#06a788] ${
+            className={`flex px-8 md:px-24 py-2 md:py-4 text-xl rounded-md text-[#06a788] border border-[#06a788] ${
               current !== "lists" ? "bg-[#06a788] text-white" : "bg-transparent"
             }`}
           >
@@ -36,7 +36,7 @@ const Properties = ({ email }: { email: string }) => {
         </div>
       </div>
       {current == "lists" && (
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {listings?.map((listing: TListing) => (
             <Card listing={listing} key={listing._id}></Card>
           ))}

@@ -16,7 +16,7 @@ const Overview = ({ property }: { property: TListing }) => {
       <div className=" border p-4 bg-white rounded-lg">
         <h1 className="text-xl pb-6">Overview</h1>
         <div className="grid grid-cols-6 gap-8">
-          <div className="col-span-4">
+          <div className="col-span-6 md:col-span-4">
             <div className="flex justify-between items-center">
               <div>
                 <h1 className="uppercase ">{type}</h1>
@@ -62,7 +62,7 @@ const Overview = ({ property }: { property: TListing }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-6 md:col-span-2">
             <Image src={gMap} height={50} width={300} alt=""></Image>
           </div>
         </div>

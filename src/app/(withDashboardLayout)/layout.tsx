@@ -12,10 +12,12 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
           <div>
             <Header></Header>
             <div className="grid min-h-screen grid-cols-5 ">
-              <div className="col-span-1">
+              <div className="col-span-1 hidden md:block">
                 <Sidebar></Sidebar>
               </div>
-              <div className="col-span-4 bg-gray-100">{children}</div>
+              <div className="col-span-5 md:col-span-4 bg-gray-100">
+                {children}
+              </div>
             </div>
             <Footer></Footer>
           </div>

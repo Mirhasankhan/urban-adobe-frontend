@@ -3,10 +3,19 @@ import { useRouter } from "next/navigation";
 import bg from "../../assets/profile.jpg";
 import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const Banner = () => {
   const [city, setCity] = useState("");
   const router = useRouter();
+
+  const handleFind = () => {
+    if (city) {
+      router.push(`/listings?address=${city}`);
+    } else {
+      toast.error("write something");
+    }
+  };
 
   return (
     <div
@@ -34,7 +43,7 @@ const Banner = () => {
               placeholder="city,address,zip :"
             />
             <div
-              onClick={() => router.push(`/listings?address=${city}`)}
+              onClick={() => handleFind()}
               className="bg-[#06a788] col-span-1  text-white text-center font-medium cursor-pointer py-1 md:py-2 md:px-5 px-0.5 rounded-full"
             >
               Find Out

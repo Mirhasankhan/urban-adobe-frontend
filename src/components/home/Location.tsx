@@ -8,11 +8,12 @@ import location4 from "../../assets/location4.png";
 const Location = () => {
   const router = useRouter();
   return (
-    <div className="px-4 md:px-14 pt-20 my-5">
+    <div className="px-4 md:px-14 md:pt-28 my-5">
       <div className="text-center py-6 md:py-12">
         <h1 className="font-semibold pb-3 text-2xl md:text-4xl">
-          Find Home By Location
+          Explore The Neighborhoods
         </h1>
+        <p>Find your dream apartment with our listing</p>
       </div>
       <div>
         <div className="grid md:grid-cols-5 gap-5">

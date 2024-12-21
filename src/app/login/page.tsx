@@ -51,14 +51,16 @@ const Login = () => {
           <Image
             className="mx-auto rounded-xl"
             src={logo}
-            height={60}
-            width={60}
+            height={40}
+            width={40}
             alt="logo"
           ></Image>
         </Link>
-        <h1 className="md:text-2xl font-medium py-2 md:py-4">
+        <h1 className="hidden md:block text-2xl font-medium py-2 md:py-4">
           Login Your Account
         </h1>
+        <p>Buyer: email: apurbo2@gmail.com , Password: 123</p>
+        <p>Seller: email: navana@gmail.com , Password: 123</p>
         <div className="py-2 md:py-4">
           <label className="block" htmlFor="">
             Email Address
@@ -82,16 +84,16 @@ const Login = () => {
           />
         </div>
         <div className="flex justify-between items-center py-3">
-          <div className="flex items-center gap-1 mt-2">
+          <div className="flex items-center gap-1 mt-1">
             <input type="checkbox" />
             <h1>Remember Me</h1>
           </div>
-          <div className="flex items-center gap-1 mt-2">
+          <div className="flex items-center gap-1 mt-1">
             <h1 className="text-blue-500">Forgot Password?</h1>
           </div>
         </div>
         <input
-          className="bg-green-500 py-2 rounded-md mt-3 text-white w-full cursor-pointer"
+          className="bg-green-500 py-2 rounded-md text-white w-full cursor-pointer"
           type="submit"
         />
         <h1 className="pt-2 text-center text-gray-600">

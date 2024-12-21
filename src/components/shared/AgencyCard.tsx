@@ -8,10 +8,11 @@ import Link from "next/link";
 
 const AgencyCard = ({ agency }: { agency: TListing }) => {
   const { email, name } = agency;
+  console.log(agency);
 
   return (
     <div className="bg-white grid grid-cols-3 mb-3 p-6 rounded-lg">
-      <div className="col-span-1">
+      <div className="col-span-3 md:col-span-1">
         <Image
           className="rounded-t-md"
           src={agencyImg}
@@ -20,11 +21,15 @@ const AgencyCard = ({ agency }: { agency: TListing }) => {
           alt=""
         ></Image>
       </div>
-      <div className="col-span-2">
+      <div className="col-span-3 md:col-span-2">
         <h1 className="text-xl font-semibold">{name}</h1>
         <div className="flex items-center gap-1 py-2">
           <CiLocationOn className="text-xl"></CiLocationOn>
-          <h1> 1611 Michigan Ave, Miami Beach, FL 33139</h1>
+          <h1>
+            {agency?.address
+              ? agency?.address
+              : "1611 Michigan Ave, Miami Beach, FL 33139"}{" "}
+          </h1>
         </div>
         <div className="flex justify-between border-b py-1">
           <h1 className="font-semibold">Office</h1>
@@ -32,7 +37,7 @@ const AgencyCard = ({ agency }: { agency: TListing }) => {
         </div>
         <div className="flex justify-between border-b py-1">
           <h1 className="font-semibold">Phone</h1>
-          <p>+0444562475</p>
+          <h1>{agency?.phone ? agency?.phone : "018665471"}</h1>
         </div>
         <div className="flex justify-between border-b py-1">
           <h1 className="font-semibold">Email</h1>

@@ -60,28 +60,18 @@ const NavigationModal = () => {
               <h1>Listings</h1>
             </div>
           </Link>
+          <Link className="border-dotted border-b-2 pb-4" href={"/agencies"}>
+            <div className="flex items-center gap-1">
+              <FaRegListAlt className="text-2xl" />
+              <h1>Agencies</h1>
+            </div>
+          </Link>
           <Link className="border-dotted border-b-2 pb-4" href={"/about"}>
             <div className="flex items-center gap-1">
               <FcAbout className="text-2xl" />
               <h1>About</h1>
             </div>
           </Link>
-          {email ? (
-            <Link
-              className="bg-green-500 text-white rounded-md py-2 px-5 text-center"
-              href={`/dashboard/${role}`}
-            >
-              Dashboard
-            </Link>
-          ) : (
-            <div>
-              <Link href={"/login"}>
-                <button className="bg-green-500 w-full text-center text-white rounded-md py-2 px-5">
-                  Login
-                </button>
-              </Link>
-            </div>
-          )}
         </div>
       </Modal>
     </>

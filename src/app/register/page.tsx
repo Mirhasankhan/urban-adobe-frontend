@@ -48,8 +48,8 @@ const Register = () => {
           <Image
             className="mx-auto rounded-xl"
             src={logo}
-            height={60}
-            width={60}
+            height={40}
+            width={40}
             alt="logo"
           ></Image>
         </Link>

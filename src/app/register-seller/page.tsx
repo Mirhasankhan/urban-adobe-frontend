@@ -48,18 +48,18 @@ const SellerRegister = () => {
           <Image
             className="mx-auto rounded-full"
             src={logo}
-            height={60}
-            width={60}
+            height={40}
+            width={40}
             alt="logo"
           ></Image>
         </Link>
-        <h1 className="md:text-2xl font-medium py-5">Register Your Agency</h1>
+        <h1 className="md:text-2xl font-medium py-3">Register Your Agency</h1>
         <div>
           <label className="block" htmlFor="">
             Agency Name
           </label>
           <input
-            className="border p-1 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
+            className="border p-1 px-3 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
             placeholder="agency name"
             type="text"
             {...register("name", { required: true })}
