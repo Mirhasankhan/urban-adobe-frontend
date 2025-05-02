@@ -7,8 +7,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "sonner";
-// import { FaGithub, FaGoogle } from "react-icons/fa";
-// import { signIn } from "next-auth/react";
 
 type Inputs = {
   name: string;
@@ -39,10 +37,7 @@ const Login = () => {
     reset();
   };
   return (
-    <div
-      className="h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: `url(${bgImag.src})` }}
-    >
+    <div>
       <form
         className="bg-white rounded-md p-4 w-5/6 md:w-1/3 mx-auto"
         onSubmit={handleSubmit(onSubmit)}
@@ -102,25 +97,6 @@ const Login = () => {
             Register
           </Link>
         </h1>
-        {/* <h1 className="border-t pt-4">Or</h1> */}
-        {/* <button
-          onClick={() =>
-            signIn("github", {
-              callbackUrl: "http://localhost:3000/dashboard",
-            })
-          }
-        >
-          <FaGithub></FaGithub>
-        </button>
-        <button
-          onClick={() =>
-            signIn("google", {
-              callbackUrl: "http://localhost:3000/dashboard",
-            })
-          }
-        >
-          <FaGoogle></FaGoogle>
-        </button> */}
       </form>
     </div>
   );

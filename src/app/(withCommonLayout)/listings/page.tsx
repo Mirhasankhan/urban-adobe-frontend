@@ -5,6 +5,12 @@ import { TListing } from "@/types/common";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useState, Suspense } from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
+// export const metadata = {
+//   title: "Properties",
+//   description: "buy sell and rent property website",
+// };
 
 const ListingsContent = () => {
   const searchParams = useSearchParams();
@@ -24,13 +30,10 @@ const ListingsContent = () => {
   };
   if (isLoading) {
     return (
-      <div className="mx-auto">
-        <Image
-          src="https://i.stack.imgur.com/hzk6C.gif"
-          width={500}
-          height={500}
-          alt="loading"
-          className="w-96 mx-auto"
+      <div className="flex justify-center mt-12">
+        <AiOutlineLoading3Quarters
+          className="animate-spin text-center text-[#06a788]"
+          size={70}
         />
       </div>
     );
@@ -68,7 +71,7 @@ const ListingsContent = () => {
       </div>
       <div className="my-12">
         {listings?.length > 0 ? (
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-4 2xl:grid-cols-5">
             {listings?.map((listing: TListing) => (
               <Card key={listing._id} listing={listing}></Card>
             ))}

@@ -2,6 +2,10 @@ import HowWorks from "@/components/home/HowWorks";
 import sell from "../../../assets/sell.png";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Sell",
+};
+
 const SellPage = () => {
   return (
     <div>

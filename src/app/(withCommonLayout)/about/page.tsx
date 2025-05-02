@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import bg1 from "../../../assets/list3.jpg";
 
 export const metadata: Metadata = {
-  title: "Urban Adobe | About",
+  title: "About",
 };
 
 const AboutUs = () => {
