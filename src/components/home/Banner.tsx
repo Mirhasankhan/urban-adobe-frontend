@@ -44,7 +44,7 @@ const Banner = () => {
             />
             <div
               onClick={() => handleFind()}
-              className="bg-[#06a788] col-span-1  text-white text-center font-medium cursor-pointer py-1 md:py-2 md:px-5 px-0.5 rounded-full"
+              className="bg-primary col-span-1  text-white text-center font-medium cursor-pointer py-1 md:py-2 md:px-5 px-0.5 rounded-full"
             >
               Find Out
             </div>

@@ -52,7 +52,7 @@ const AgencyCard = ({ agency }: { agency: TListing }) => {
             <FaYoutube></FaYoutube>
           </div>
           <Link href={`/agencies/${email}`}>
-            <button className="text-[#06a788] hover:text-white hover:bg-[#06a788] border-[#06a788] border w-full bg-white px-4 py-2 rounded-md ">
+            <button className="text-primary hover:text-white hover:bg-primary border-primary border w-full bg-white px-4 py-2 rounded-md ">
               View Properties
             </button>
           </Link>

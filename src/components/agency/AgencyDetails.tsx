@@ -30,7 +30,7 @@ const AgencyDetails = (userData: {
               onClick={() =>
                 (window.location.href = `tel:${phone ? phone : "018665471"}`)
               }
-              className="text-[#06a788] hover:text-white hover:bg-[#06a788] border-[#06a788] border w-full bg-white px-4 py-2 rounded-md "
+              className="text-primary hover:text-white hover:bg-primary border-primary border w-full bg-white px-4 py-2 rounded-md "
             >
               Call
             </button>

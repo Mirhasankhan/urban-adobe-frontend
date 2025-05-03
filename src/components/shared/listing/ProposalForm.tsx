@@ -121,7 +121,7 @@ const ProposalForm = ({ property }: { property: TListing }) => {
             className={`${
               isBrought !== undefined
                 ? "bg-gray-500"
-                : "bg-[#06a788]  hover:bg-green-700"
+                : "bg-primary  hover:bg-green-700"
             } py-2 rounded-md text-white font-medium w-full mt-4`}
           >
             {isBrought == undefined

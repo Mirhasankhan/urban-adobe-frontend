@@ -14,19 +14,19 @@ const Navigate = () => {
     <div className="relative">
       <div>
         <div className="hidden md:flex gap-8 items-center font-medium">
-          <Link className="hover:text-[#06a788] text-[18px] " href={"/"}>
+          <Link className="hover:text-primary text-[18px] " href={"/"}>
             Home
           </Link>
-          <Link className="hover:text-[#06a788] text-[18px] " href={"/sell"}>
+          <Link className="hover:text-primary text-[18px] " href={"/sell"}>
             Sell
           </Link>
-          <Link className="hover:text-[#06a788] text-[18px]" href={"/listings"}>
+          <Link className="hover:text-primary text-[18px]" href={"/listings"}>
             Properties
           </Link>
-          <Link className="hover:text-[#06a788] text-[18px]" href={"/agencies"}>
+          <Link className="hover:text-primary text-[18px]" href={"/agencies"}>
             Agencies
           </Link>
-          <Link className="hover:text-[#06a788] text-[18px]" href={"/about"}>
+          <Link className="hover:text-primary text-[18px]" href={"/about"}>
             About
           </Link>
         </div>

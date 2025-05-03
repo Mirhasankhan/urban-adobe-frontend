@@ -36,10 +36,10 @@ const FeaturedCard = ({ listing }: { listing: TListing }) => {
           <p>{listing.bathroom} Bath</p>
         </div>
         <div className="flex justify-between items-center">
-          <p className="text-[#06a788] font-medium">
+          <p className="text-primary font-medium">
             ${listing.price} {listing.for == "rent" ? "(monthly)" : ""}
           </p>
-          <p className="bg-[#06a788] text-white font-medium px-2 rounded-md">
+          <p className="bg-primary text-white font-medium px-2 rounded-md">
             {listing.type}
           </p>
         </div>

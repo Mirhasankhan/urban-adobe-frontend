@@ -26,12 +26,12 @@ const Proposal = ({ property }: { property: TListing }) => {
           <SendEmailButton emails={sellerEmail}></SendEmailButton>
           <button
             onClick={() => (window.location.href = `tel:${"01839033505"}`)}
-            className="text-[#06a788] hover:text-white hover:bg-[#06a788] border-[#06a788] border w-full bg-white px-4 py-2 rounded-md "
+            className="text-primary hover:text-white hover:bg-primary border-primary border w-full bg-white px-4 py-2 rounded-md "
           >
             Call
           </button>
         </div>
-        <button className="text-[#06a788] hover:text-white hover:bg-[#06a788] border-[#06a788] mt-3 border w-full bg-white px-4 py-2 rounded-md ">
+        <button className="text-primary hover:text-white hover:bg-primary border-primary mt-3 border w-full bg-white px-4 py-2 rounded-md ">
           WhatsApp
         </button>
       </div>

@@ -27,7 +27,7 @@ const Location = () => {
             <div className="bg-black w-full h-full bg-opacity-30 flex flex-col">
               <div className="mt-auto flex items-center justify-between px-6 pb-4">
                 <h1 className="text-2xl font-medium py-2 text-white">Dhaka</h1>
-                <p className=" hover:bg-[#06a788] p-2 rounded-md bg-black text-white bg-opacity-55 font-medium">
+                <p className=" hover:bg-primary p-2 rounded-md bg-black text-white bg-opacity-55 font-medium">
                   12 Properties
                 </p>
               </div>
@@ -45,7 +45,7 @@ const Location = () => {
                 <h1 className="text-2xl font-medium py-2 text-white">
                   Gazipur
                 </h1>
-                <p className=" hover:bg-[#06a788] p-2 rounded-md bg-black text-white bg-opacity-55 font-medium">
+                <p className=" hover:bg-primary p-2 rounded-md bg-black text-white bg-opacity-55 font-medium">
                   3 Properties
                 </p>
               </div>
@@ -65,7 +65,7 @@ const Location = () => {
                 <h1 className="text-2xl font-medium py-2 text-white">
                   Chittagong
                 </h1>
-                <p className=" hover:bg-[#06a788] p-2 rounded-md bg-black text-white bg-opacity-55 font-medium">
+                <p className=" hover:bg-primary p-2 rounded-md bg-black text-white bg-opacity-55 font-medium">
                   5 Properties
                 </p>
               </div>
@@ -83,7 +83,7 @@ const Location = () => {
                 <h1 className="text-2xl font-medium py-2 text-white">
                   Narayangonj
                 </h1>
-                <p className=" hover:bg-[#06a788] p-2 rounded-md bg-black text-white bg-opacity-55 font-medium">
+                <p className=" hover:bg-primary p-2 rounded-md bg-black text-white bg-opacity-55 font-medium">
                   8 Properties
                 </p>
               </div>

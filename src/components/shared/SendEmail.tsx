@@ -12,7 +12,7 @@ const SendEmailButton = ({ emails }: { emails: string }) => {
   return (
     <button
       onClick={handleClick}
-      className="bg-[#06a788] w-full px-4 py-2 rounded-md text-white"
+      className="bg-primary w-full px-4 py-2 rounded-md text-white"
     >
       Send Email
     </button>

@@ -38,28 +38,28 @@ const Card = ({ listing }: { listing: TListing }) => {
 
         <div className="flex justify-between items-center border-y py-4 my-4">
           <div className="flex gap-1 items-center">
-            <FaRegSquare className="text-[#06a788] text-xl"></FaRegSquare>
+            <FaRegSquare className="text-primary text-xl"></FaRegSquare>
             <p>{listing.size} sqf</p>
           </div>
           <div className="flex gap-1 items-center">
-            <IoIosBed className="text-[#06a788] text-xl"></IoIosBed>
+            <IoIosBed className="text-primary text-xl"></IoIosBed>
             <p>{listing.bedroom}</p>
           </div>
           <div className="flex gap-1 items-center">
-            <LuBath className="text-[#06a788] text-xl"></LuBath>
+            <LuBath className="text-primary text-xl"></LuBath>
             <p>{listing.bathroom}</p>
           </div>
         </div>
         <div className="flex justify-between items-center my-4">
-          <p className="bg-[#06a788] text-white font-medium px-2 rounded-md">
+          <p className="bg-primary text-white font-medium px-2 rounded-md">
             {listing.type}
           </p>
-          <p className="text-[#06a788] font-medium">
+          <p className="text-primary font-medium">
             ${listing.price} {listing.for == "rent" ? "(monthly)" : ""}
           </p>
         </div>
 
-        <p className="absolute left-4 top-4  font-medium bg-[#06a788] text-white px-3 py-1 rounded-lg z-20">
+        <p className="absolute left-4 top-4  font-medium bg-primary text-white px-3 py-1 rounded-lg z-20">
           For {listing.for}
         </p>
       </div>

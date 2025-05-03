@@ -148,7 +148,7 @@ const Profile = () => {
               </div>
             </div>
             <input
-              className="cursor-pointer bg-[#06a788] font-medium py-2 rounded-md mt-3 text-white w-full"
+              className="cursor-pointer bg-primary font-medium py-2 rounded-md mt-3 text-white w-full"
               type="submit"
             />
           </form>

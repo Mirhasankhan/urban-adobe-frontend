@@ -32,7 +32,7 @@ const ListingsContent = () => {
     return (
       <div className="flex justify-center mt-12">
         <AiOutlineLoading3Quarters
-          className="animate-spin text-center text-[#06a788]"
+          className="animate-spin text-center text-primary"
           size={70}
         />
       </div>

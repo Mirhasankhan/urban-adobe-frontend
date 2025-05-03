@@ -7,6 +7,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "sonner";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { useState } from "react";
 
 export type Inputs = {
   name: string;
@@ -17,12 +19,14 @@ export type Inputs = {
 
 const Register = () => {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setIsLoading(true);
     const newUser = { ...data, role: "buyer" };
     try {
       const response = await axios.post(
@@ -31,25 +35,21 @@ const Register = () => {
       );
       toast.success(response.data.message);
       router.push("/login");
+      setIsLoading(false);
     } catch (err: any) {
       toast.error(err.response.data.message);
+      setIsLoading(false);
     }
   };
   return (
-    <div
-      className="h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: `url(${bgImag.src})` }}
-    >
-      <form
-        className="bg-white rounded-md p-2 md:p-4 w-5/6 md:w-1/3 mx-auto"
-        onSubmit={handleSubmit(onSubmit)}
-      >
+    <div className="mt-6 w-full px-4 md:mx-auto md:w-1/3 2xl:w-1/4">
+      <form className="rounded-md p-2" onSubmit={handleSubmit(onSubmit)}>
         <Link href={"/"}>
           <Image
-            className="mx-auto rounded-xl"
+            className="pb-6 rounded-xl"
             src={logo}
-            height={40}
-            width={40}
+            height={70}
+            width={70}
             alt="logo"
           ></Image>
         </Link>
@@ -57,48 +57,64 @@ const Register = () => {
           Register Your Account
         </h1>
         <div>
-          <label className="block" htmlFor="">
+          <label className="block pb-1" htmlFor="">
             Your Name
           </label>
           <input
-            className="border p-1 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
+            className="w-full p-2 border focus:outline-primary rounded-md"
             placeholder="your Name"
             type="text"
-            {...register("name", { required: true })}
+            {...register("name", { required: "Name is required" })}
           />
+          {errors.name && (
+            <p className="text-red-500 text-sm mt-1">
+              {errors.name.message}
+            </p>
+          )}
         </div>
         <div className="py-2 md:py-4">
-          <label className="block" htmlFor="">
+          <label className="block pb-1" htmlFor="">
             Email Address
           </label>
           <input
-            className="border p-1 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
+            className="w-full p-2 border focus:outline-primary rounded-md"
             placeholder="name@gmail.com"
             type="email"
-            {...register("email", { required: true })}
+            {...register("email", { required: "Email is required" })}
           />
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1">
+              {errors.email.message}
+            </p>
+          )}
         </div>
         <div>
-          <label className="block" htmlFor="">
+          <label className="block pb-1" htmlFor="">
             Password
           </label>
           <input
-            className="border p-1 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
+            className="w-full p-2 border focus:outline-primary rounded-md"
             placeholder="password"
             type="password"
-            {...register("password", { required: true })}
+            {...register("password", { required: "Password is required" })}
           />
+          {errors.password && (
+            <p className="text-red-500 text-sm mt-1">
+              {errors.password.message}
+            </p>
+          )}
         </div>
-        <div className="flex items-center gap-1 mt-2">
-          <input type="checkbox" />
-          <h1>
-            I Accept <span className="text-green-500">Terms And Condition</span>
-          </h1>
-        </div>
-        <input
-          className="cursor-pointer bg-green-500 py-2 rounded-md mt-3 text-white w-full"
+        <button
+          disabled={isLoading}
           type="submit"
-        />
+          className="bg-primary py-2 mt-3 rounded-md text-white w-full cursor-pointer"
+        >
+          {isLoading ? (
+            <AiOutlineLoading3Quarters className="text-xl animate-spin mx-auto" />
+          ) : (
+            "Sign Up"
+          )}
+        </button>
         <h1 className="pt-2 text-center text-gray-600">
           Already have an account?{" "}
           <Link className="text-blue-500" href={"/login"}>

@@ -17,9 +17,9 @@ const Sidebar = () => {
           <div
             className={`${
               pathName === `/dashboard${item.path}`
-                ? "bg-[#06a788]  text-white border-r-4 border-orange-600"
+                ? "bg-primary  text-white border-r-4 border-orange-600"
                 : ""
-            } hover:bg-[#06a788] hover:text-white my-4 p-3 mx-3 rounded-md flex items-center`}
+            } hover:bg-primary hover:text-white my-4 p-3 mx-3 rounded-md flex items-center`}
           >
             {item.icon && <p className="mr-2 text-xl">{<item.icon />}</p>}
             <h1>{item.title}</h1>

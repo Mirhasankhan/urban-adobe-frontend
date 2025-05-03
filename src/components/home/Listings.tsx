@@ -39,7 +39,7 @@ const HomeListings = () => {
           </div>
         )}
         <Link className="flex justify-center" href="/listings">
-          <button className="bg-[#06a788] mt-5 font-medium px-4 py-2 text-white rounded-md">
+          <button className="bg-primary mt-5 font-medium px-4 py-2 text-white rounded-md">
             View All Listings
           </button>
         </Link>

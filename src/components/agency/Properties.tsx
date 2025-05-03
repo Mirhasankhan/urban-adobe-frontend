@@ -19,16 +19,16 @@ const Properties = ({ email }: { email: string }) => {
         <div className="flex gap-2 my-5">
           <button
             onClick={() => setCurrent("lists")}
-            className={`flex px-8 md:px-24 md:py-4 py-2 text-xl rounded-md text-[#06a788] border border-[#06a788] ${
-              current === "lists" ? "bg-[#06a788] text-white" : "bg-transparent"
+            className={`flex px-8 md:px-24 md:py-4 py-2 text-xl rounded-md text-primary border border-primary ${
+              current === "lists" ? "bg-primary text-white" : "bg-transparent"
             }`}
           >
             Listings
           </button>
           <button
             onClick={() => setCurrent("review")}
-            className={`flex px-8 md:px-24 py-2 md:py-4 text-xl rounded-md text-[#06a788] border border-[#06a788] ${
-              current !== "lists" ? "bg-[#06a788] text-white" : "bg-transparent"
+            className={`flex px-8 md:px-24 py-2 md:py-4 text-xl rounded-md text-primary border border-primary ${
+              current !== "lists" ? "bg-primary text-white" : "bg-transparent"
             }`}
           >
             Reviews

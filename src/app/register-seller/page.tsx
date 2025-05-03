@@ -94,7 +94,7 @@ const SellerRegister = () => {
           </h1>
         </div>
         <button
-          className="bg-[#06a788] py-2 rounded-md mt-3 text-white w-full"
+          className="bg-primary py-2 rounded-md mt-3 text-white w-full"
           type="submit"
         >
           Create Account

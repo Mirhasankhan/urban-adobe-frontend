@@ -61,7 +61,7 @@ const Header = () => {
               <div className="absolute bg-white border px-4 py-2 top-20 rounded-md right-12">
                 <Sidebar></Sidebar>
                 <button
-                  className="ml-4 flex items-center gap-1 hover:bg-[#06a788] hover:text-white p-3 rounded-lg pr-24"
+                  className="ml-4 flex items-center gap-1 hover:bg-primary hover:text-white p-3 rounded-lg pr-24"
                   onClick={() => handleLogout()}
                 >
                   <IoLogOutOutline className="text-xl" />
@@ -73,7 +73,7 @@ const Header = () => {
         ) : (
           <div>
             <Link href={"/login"}>
-              <button className="bg-[#06a788] text-white rounded-md py-2 px-5">
+              <button className="bg-primary text-white rounded-md py-2 px-5">
                 Login
               </button>
             </Link>

@@ -105,7 +105,7 @@ const AddReview = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-[#06a788]  text-white py-2 rounded hover:bg-blue-600"
+          className="w-full bg-primary  text-white py-2 rounded hover:bg-blue-600"
         >
           Submit Review
         </button>

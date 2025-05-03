@@ -14,7 +14,7 @@ const Details = ({ property }: { property: TListing }) => {
           <button className="bg-green-500  text-white rounded-sm px-2 py-1">
             FEATURED
           </button>
-          <button className="bg-[#06a788] mx-4 uppercase text-white rounded-sm px-2 py-1">
+          <button className="bg-primary mx-4 uppercase text-white rounded-sm px-2 py-1">
             For {property.for}
           </button>
           <button className="bg-red-500 text-white rounded-sm px-2 py-1">
