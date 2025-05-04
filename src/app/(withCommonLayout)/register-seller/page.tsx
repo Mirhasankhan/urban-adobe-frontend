@@ -1,7 +1,6 @@
 "use client";
 import { useForm, SubmitHandler } from "react-hook-form";
-import bgImag from "../../assets/room1.webp";
-import logo from "../../assets/logo5.jpeg";
+import logo from "../../../assets/logo5.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -37,11 +36,11 @@ const SellerRegister = () => {
   };
   return (
     <div
-      className="h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: `url(${bgImag.src})` }}
+      className="mt-6 w-full px-4 md:mx-auto md:w-1/3 2xl:w-1/4"
+    
     >
       <form
-        className="bg-white rounded-md p-2 md:p-4 w-5/6 md:w-1/3 mx-auto"
+        className="bg-white shadow-[0px_4px_15px_rgba(255,69,58,0.15)] rounded-md p-3"
         onSubmit={handleSubmit(onSubmit)}
       >
         <Link href={"/"}>
@@ -55,52 +54,47 @@ const SellerRegister = () => {
         </Link>
         <h1 className="md:text-2xl font-medium py-3">Register Your Agency</h1>
         <div>
-          <label className="block" htmlFor="">
+          <label className="block pb-1" htmlFor="">
             Agency Name
           </label>
           <input
-            className="border p-1 px-3 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
+           className="w-full p-3 border focus:outline-primary rounded-md"
             placeholder="agency name"
             type="text"
             {...register("name", { required: true })}
           />
         </div>
         <div className="py-4">
-          <label className="block" htmlFor="">
+          <label className="block pb-1" htmlFor="">
             Email Address
           </label>
           <input
-            className="border p-1 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
+            className="w-full p-3 border focus:outline-primary rounded-md"
             placeholder="agency@gmail.com"
             type="email"
             {...register("email", { required: true })}
           />
         </div>
         <div>
-          <label className="block" htmlFor="">
+          <label className="block pb-1" htmlFor="">
             Password
           </label>
           <input
-            className="border p-1 w-full rounded-md mt-1 focus:outline-none focus:border-green-500"
+           className="w-full p-3 border focus:outline-primary rounded-md"
             placeholder="password"
             type="password"
             {...register("password", { required: true })}
           />
         </div>
-        <div className="flex items-center gap-1 mt-2">
-          <input type="checkbox" />
-          <h1>
-            I Accept <span className="text-green-500">Terms And Condition</span>
-          </h1>
-        </div>
+       
         <button
-          className="bg-primary py-2 rounded-md mt-3 text-white w-full"
+          className="bg-primary py-3 rounded-md mt-4 font-medium text-white w-full"
           type="submit"
         >
           Create Account
         </button>
         <h1 className="pt-2 text-center text-gray-600">
-          Already have an account?{" "}
+          Already have an account?
           <Link className="text-blue-500" href={"/login"}>
             Login
           </Link>

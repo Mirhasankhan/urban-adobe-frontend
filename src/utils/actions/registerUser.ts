@@ -1,6 +1,6 @@
 "use server";
 
-import { Inputs } from "@/app/register/page";
+import { Inputs } from "@/app/(withCommonLayout)/register/page";
 import axios from "axios";
 import { toast } from "sonner";
 

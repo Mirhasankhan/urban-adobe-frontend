@@ -31,7 +31,7 @@ const Agencies = () => {
     );
   }
   return (
-    <div className="px-4 bg-gray-100 md:px-12 pt-6">
+    <div className="px-4 bg-gray-100 md:px-12 2xl:px-28 pt-6">
       <h1 className="pb-4 text-2xl font-medium">All Agencies</h1>
       <div className="grid grid-cols-6 gap-6">
         <div className="col-span-6 md:col-span-4 gap-6">

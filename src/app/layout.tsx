@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import Providers from "@/lib/providers/Providers";
 // import { ThemeProvider } from "@/lib/providers/ThemeProvider";
 
-const roboto = Roboto({
+const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
 });
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en">
-        <body className={roboto.className}>
+        <body className={poppins.className}>
           <Toaster position="top-right" richColors />
           {children}
         </body>

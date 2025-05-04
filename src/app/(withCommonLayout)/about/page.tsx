@@ -13,15 +13,15 @@ const AboutUs = () => {
   return (
     <div>
       <div
-        className="h-[100px] md:h-[200px] bg-cover bg-center flex items-center justify-center"
+        className="h-[100px] md:h-[250px] 2xl:h-[350px] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${bg1.src})` }}
       >
-        <div className="bg-blue-700 bg-opacity-50 h-full w-full text-white flex flex-col items-center justify-center">
-          <h1 className="text-3xl">About Us</h1>
-          <p>Your Trusted Partner in Real Estate Solutions</p>
+        <div className="bg-black bg-opacity-20 text-white h-full w-full flex flex-col items-center justify-center">
+          <h1 className="text-4xl font-semibold">About Us</h1>
+          <p className="font-medium text-2xl mt-2">Your Trusted Partner in Real Estate Solutions</p>
         </div>
       </div>
-      <div className="px-4 md:px-12">
+      <div className="px-4 md:px-12 2xl:px-28">
         <h1 className="text-xl py-6 font-semibold">Who We Are?</h1>
         <p>
           At Urban Adobe, we believe finding your perfect space shouldn’t be

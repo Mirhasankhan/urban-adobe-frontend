@@ -1,87 +1,53 @@
+"use client";
 import Image from "next/image";
 import logo from "../../assets/logo5.jpeg";
 import Link from "next/link";
 import { CiLocationOn } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
-import { FiPhone } from "react-icons/fi";
+import { FaYoutube } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaPinterestP } from "react-icons/fa";
+import Navigate from "./Navigate";
 
 const Footer = () => {
   return (
-    <div className="bg-[#004274] text-white">
-      <div className="grid md:grid-cols-3 grid-cols-1 px-4 md:px-14 py-8 md:py-16 gap-6 ">
-        <div>
-          <div className="flex gap-1 items-center">
+    <div className="bg-[#eb309a] bg-opacity-30">
+      <div className="flex flex-col items-center justify-center py-6">
+        <div className="flex gap-6 items-center justify-center">
+          <h1 className="w-24 border-gray-600 border"></h1>
+          <div className="flex items-center gap-1">
             <Image
+              className="rounded-full"
+              alt=""
               src={logo}
               width={40}
               height={40}
-              className="rounded-full"
-              alt="logo"
             ></Image>
-            <h1 className="font-medium">Urban Adobe</h1>
+            <h1 className="font-semibold text-2xl text-primary">Urban Adobe</h1>
           </div>
-          <p className="pt-4 text-sm">
-            Welcome to Urban Adobe your go-to platform for buying, selling, and
-            renting properties with zero agents and no commissions. Connect
-            directly with property owners and tenants for a seamless,
-            transparent experience. Explore extensive listings and enjoy secure,
-            hassle-free transactions, all in one place. Your next property
-            journey starts here!
-          </p>
+          <h1 className="w-24 border-gray-600 border"></h1>
         </div>
-        <div className="flex justify-between md:justify-evenly">
-          <div>
-            <h1 className="pb-4 font-medium">Company</h1>
-            <div className="flex flex-col gap-1">
-              <Link className="hover:text-gray-400" href="/">
-                About Us
-              </Link>
-              <Link className="hover:text-gray-400" href="/">
-                Services
-              </Link>
-              <Link className="hover:text-gray-400" href="/">
-                Blogs
-              </Link>
-              <Link className="hover:text-gray-400" href="/">
-                Login
-              </Link>
-            </div>
+        <h2 className="py-3 font-medium">urbanAdobe@gmail.com</h2>
+        <h2 className="font-medium">+228148548548</h2>
+        <div className="flex items-center gap-4 cursor-pointer text-xl my-3">
+          <div className="p-3 rounded-md text-primary bg-white hover:bg-primary hover:text-white">
+            <FaFacebookF></FaFacebookF>
           </div>
-          <div>
-            <h1 className=" pb-4 font-medium">Useful Links</h1>
-            <div className="flex flex-col gap-1">
-              <Link className="hover:text-gray-400" href="/">
-                Terms Of Services
-              </Link>
-              <Link className="hover:text-gray-400" href="/">
-                Privacy Policy
-              </Link>
-              <Link className="hover:text-gray-400" href="/">
-                Listings
-              </Link>
-              <Link className="hover:text-gray-400" href="/">
-                Contact Us
-              </Link>
-            </div>
+          <div className="p-3 rounded-md text-primary bg-white hover:bg-primary hover:text-white">
+            <FaPinterestP></FaPinterestP>
+          </div>
+          <div className="p-3 rounded-md text-primary bg-white hover:bg-primary hover:text-white">
+            <FaInstagram></FaInstagram>
+          </div>
+          <div className="p-3 rounded-md text-primary bg-white hover:bg-primary hover:text-white">
+            <FaYoutube></FaYoutube>
           </div>
         </div>
-        <div>
-          <h1 className="pb-4 font-medium">Contact details</h1>
-          <div className="flex gap-1 items-center">
-            <CiLocationOn className="text-2xl text-green-500"></CiLocationOn>
-            <h1>44 Purana Paltan, Dhaka-1000</h1>
-          </div>
-          <div className="flex gap-1 items-center py-3">
-            <CiMail className="text-2xl text-green-500"></CiMail>
-            <h1>mirhasan000034@gmail.com</h1>
-          </div>
-          <div className="flex gap-1 items-center">
-            <FiPhone className="text-2xl text-green-500"></FiPhone>
-            <h1>+88-01678506798</h1>
-          </div>
+        <div className="text-gray-600">
+          {" "}
+          <Navigate></Navigate>
         </div>
       </div>
-      <h1 className="text-sm text-center pb-2">
+      <h1 className="text-sm text-center py-3 border-gray-400 border-t border-dotted">
         © 2024 Urban Adobe. Design by Mir Hasan.
       </h1>
     </div>

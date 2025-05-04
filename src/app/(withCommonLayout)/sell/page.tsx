@@ -27,7 +27,7 @@ const SellPage = () => {
             Sell Faster. Save Thousands.
           </h1>
           <Link href="/register-seller">
-            <button className="bg-green-500 py-2 px-8 mt-4 rounded-lg border border-green-400 hover:bg-transparent">
+            <button className="bg-primary py-2 px-8 mt-4 rounded-lg border border-primary hover:bg-transparent">
               Register Your Agency
             </button>
           </Link>

@@ -23,7 +23,7 @@ const Agency = ({ params }: { params: { agency: string } }) => {
     );
   }
   return (
-    <div className="bg-gray-100 px-4 md:px-12 py-6">
+    <div className="bg-gray-100 px-4 md:px-12 2xl:px-28 py-6">
       <AgencyDetails userData={user[0]}></AgencyDetails>
       <div className="grid grid-cols-4 mt-4">
         <div className="col-span-4 md:col-span-3">
