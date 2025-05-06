@@ -8,7 +8,7 @@ import location4 from "../../assets/location4.png";
 const Location = () => {
   const router = useRouter();
   return (
-    <div className="px-4 md:px-14 md:pt-28 my-5">
+    <div className="px-4 md:px-14 2xl:px-60 md:pt-28 my-5">
       <div className="text-center py-6 md:py-12">
         <h1 className="font-semibold pb-3 text-2xl md:text-4xl">
           Explore The Neighborhoods

@@ -35,7 +35,7 @@ const Categories = () => {
   const office = `/listings?category=office`;
 
   return (
-    <div className="px-4 md:px-24">
+    <div className="px-4 md:px-24 2xl:px-60">
       <div className="text-center py-12">
         <h1 className="font-semibold md:text-3xl pb-3 text-xl">
           Explore Our Properties

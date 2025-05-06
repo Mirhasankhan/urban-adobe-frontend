@@ -13,7 +13,7 @@ const HomeListings = () => {
   });
 
   return (
-    <div className="px-4 md:px-14 2xl:px-28">
+    <div className="px-4 md:px-14 2xl:px-60">
       <div className="py-6 md:py-8">
         <h1 className="font-semibold text-center pb-3 text-xl md:text-3xl">
           Explore Our Latest Properties

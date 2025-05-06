@@ -40,7 +40,7 @@ const ListingsContent = () => {
   }
 
   return (
-    <div className=" px-4 md:px-14">
+    <div className=" px-4 md:px-14 2xl:px-60">
       <div className="md:flex justify-between items-center mt-6">
         <div>
           <h1 className="text-2xl md:text-3xl text-center font-medium">
@@ -71,7 +71,7 @@ const ListingsContent = () => {
       </div>
       <div className="my-12">
         {listings?.length > 0 ? (
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-4 2xl:grid-cols-5">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
             {listings?.map((listing: TListing) => (
               <Card key={listing._id} listing={listing}></Card>
             ))}
